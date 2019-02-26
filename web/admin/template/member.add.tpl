@@ -49,65 +49,27 @@
                     <div class="widget-content">
 
                         <div class="form-group">
-                            <label class="col-sm-2 control-label"><code>*</code> 登陆名 :</label>
-                            <div class="col-sm-10">
-                                <input name="username"  type="text" class="form-control" datatype="*" nullmsg="请输入用户名"
+                            <label class="col-sm-2 control-label"><code>*</code> 姓名 :</label>
+                            <div class="col-sm-4">
+                                <input name="username"  type="text" class="form-control" datatype="*" nullmsg="请输入姓名"
                                 value="<{if empty($data['username'])}><{else}><{$data.username}><{/if}>" />
                             </div>
                         </div>
 
-                        <div class="hr-line-dashed"></div>
-
                         <div class="form-group">
-                            <label class="col-sm-2 control-label"><code>*</code> 用户密码:</label>
-                            <div class="col-sm-10">
-                                <input type='password' name='password' class="form-control" datatype="password" nullmsg="请输入用户密码" errmsg="请输入大于6位，并且包含大小写字母和数字的密码"
-                                value="<{if empty($data['password'])}><{else}><{$data.password}><{/if}>" />
-                                <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 必须大于6位，包含大小写字母和数字</span>
+                            <label class="col-sm-2 control-label"><code>*</code> 手机号码:</label>
+                            <div class="col-sm-4">
+                                <input type="text" name='mobile' class="form-control" datatype="*" nullmsg="请输入手机号码"
+                                       value="<{if empty($data['mobile'])}><{else}><{$data.mobile}><{/if}>"/>
                             </div>
                         </div>
 
-                        <div class="hr-line-dashed"></div>
 
                         <div class="form-group">
-                            <label class="col-sm-2 control-label"><code>*</code> 昵称:</label>
-                            <div class="col-sm-4">
-                                <input type="text" name='nickname' class="form-control" datatype="*" nullmsg="请输入真实姓名"
-                                       value="<{if empty($data['nickname'])}><{else}><{$data.nickname}><{/if}>"/>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label"><code>*</code> 状态:</label>
-                            <div class="col-sm-4">
-                                <select name="status" class="form-control" datatype="*" nullmsg="请输入分类">
-                                    <{if !empty($data['status'])}>
-                                    <{html_options options=$status selected=$data.status}>
-                                    <{else}>
-                                    <{html_options options=$status }>
-                                    <{/if}>
-                                </select>
-                            </div>
-
-                            <label class="col-sm-2 control-label"><code>*</code> 性别:</label>
-                            <div class="col-sm-4">
-                                <select name="sex" class="form-control" datatype="*" nullmsg="请输入分类">
-                                    <{if !empty($data['sex'])}>
-                                    <{html_options options=$sexs selected=$data.sex}>
-                                    <{else}>
-                                    <{html_options options=$sexs }>
-                                    <{/if}>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="hr-line-dashed"></div>
-
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">Email:</label>
-                            <div class="col-sm-10">
-                                <input type="text" name='email' class="form-control" datatype="e" ignore="ignore" errmsg="请输入正确的邮箱"
-                                value="<{if empty($data['email'])}><{else}><{$data.email}><{/if}>" />
+                            <label class="col-sm-2 control-label"><code>*</code> 公司名称:</label>
+                            <div class="col-sm-6">
+                                <input type="text" name='company_name' class="form-control" datatype="*" nullmsg="请输入公司名称" errmsg="请输入公司名称"
+                                value="<{if empty($data['company_name'])}><{else}><{$data.company_name}><{/if}>" />
                             </div>
                         </div>
 
@@ -120,31 +82,7 @@
                         <!--</div>-->
                         <!--</div>-->
 
-                        <div class="hr-line-dashed"></div>
 
-                        <div class="form-group uploader-group uploader-group-img"
-                             data-compress="true"
-                             data-thumb_w='100'
-                             data-auto="true"
-                             data-len="1"
-                             data-multiple="false"
-                             data-dir="image"
-                             data-extensions="gif,jpg,jpeg,bmp,png"
-                             data-chunked="true">
-                            <memberl class="col-sm-2 control-label"> 头像:</memberl>
-                            <div class="col-sm-10">
-                                <!--用来存放文件信息-->
-                                <div class="uploader-list"></div>
-                                <a class="btn btn-dark uploader-picker"
-                                   data-member="avator"
-                                   data-type="image"><i class="fa fa-upload"></i> </a>
-                            </div>
-                            <div class="hidden-input col-sm-9 col-sm-offset-2">
-                                <input type="hidden" class="form-control member" nullmsg="请上传文件">
-                            </div>
-                        </div>
-
-                        <div class="hr-line-dashed"></div>
 
                         <div class="form-group">
                             <div class="col-sm-4 col-sm-offset-2">

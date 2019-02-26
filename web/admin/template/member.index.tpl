@@ -18,9 +18,9 @@
                     <form class="form-inline" action="" method="GET">
                         <input type="hidden" name="ct" value="<{request_em key='ct'}>" />
                         <input type="hidden" name="ac" value="<{request_em key='ac'}>" />
-                        <div class="form-group">
+                        <div class="form-group" style="width:50%;">
                             <!--<memberl>关键字</memberl>-->
-                            <input type='text' name='keyword' class='form-control' value="<{request_em key='keyword'}>" placeholder="请输入标题" />
+                            <input type='text' name='keyword' style="width: 100%;" class='form-control' value="<{request_em key='keyword'}>" placeholder="请输入手机号,姓名或者公司名称" />
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-white">搜索</button>
@@ -29,32 +29,24 @@
                 </div>
                 <div class="widget-content">
 
-                    <table class="table table-bordered table-hover table-agl-c with-check">
+                    <table class="table table-bordered table-hover table-agl-c">
                         <thead>
                         <tr>
-                            <th> <input type="checkbox" class="parent" /> </th>
-                            <th> ID </th>
-                            <th> 名称 </th>
-                            <th> 昵称 </th>
-                            <th> 邮箱 </th>
-                            <th> 性别 </th>
-                            <th> 状态 </th>
+                            <th> 公司名称 </th>
+                            <th> 姓名 </th>
+                            <th> 手机号码 </th>
                             <th> 管理 </th>
                         </tr>
                         </thead>
                         <tbody>
                             <{foreach from=$list item=v}>
                             <tr <{if $v['status'] == 2}>style="background:#f2dede !important;"<{/if}> >
-                                <td> <input type="checkbox" name="member_ids[]" value="<{$v.member_id}>" class="child" /> </td>
-                                <td> <{$v.member_id}> </td>
+                                <td> <{$v.company_name}> </td>
                                 <td> <{$v.username}> </td>
-                                <td> <{$v.nickname}> </td>
-                                <td> <{$v.email}> </td>
-                                <td> <{$sexs[$v['sex']]}> </td>
-                                <td> <{$status[$v['status']]}> </td>
+                                <td> <{$v.mobile}> </td>
                                 <td>
+                                    <a href="?ct=member&ac=send_goods&id=<{$v.member_id}>" class="btn btn-primary btn-xs"><i class="fa fa-send-o"></i>给他发货</a>
                                     <a href="?ct=member&ac=edit&id=<{$v.member_id}>" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>编辑</a>
-                                    <a href="?ct=member&ac=edit&id=<{$v.member_id}>" class="btn btn-danger btn-xs"><i class="fa fa-delicious"></i>禁用</a>
                                 </td>
                             </tr>
                             <{foreachelse}>

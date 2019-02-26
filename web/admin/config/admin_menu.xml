@@ -1,41 +1,13 @@
 <xml>
 
-    <menu name='内容管理' class='fa fa-th-list'>
-        <menu name='文件管理' class='fa fa-file'>
-            <menu name='列表' ct='file' ac='index' reload='1' default='1' />
-            <menu name='添加视频' ct='file' ac='add' display='none' />
-            <menu name='修改视频' ct='file' ac='edit' display='none' />
-            <menu name='删除视频' ct='file' ac='del' display='none' />
-        </menu>
-        <menu name='分类管理' class='fa fa-file'>
-            <menu name='分类列表' ct='cate' ac='index' reload='1' default='1' />
-            <menu name='添加分类' ct='cate' ac='add' display='none' />
-            <menu name='修改分类' ct='cate' ac='edit' display='none' />
-            <menu name='删除分类' ct='cate' ac='del' display='none' />
-            <menu name='保存分类' ct='cate' ac='save' display='none' />
-        </menu>
-        <menu name='标签管理' class='fa fa-file'>
-            <menu name='标签列表' ct='labe' ac='index' reload='1' default='1' />
-            <menu name='添加标签' ct='labe' ac='add' display='none' />
-            <menu name='修改标签' ct='labe' ac='edit' display='none' />
-            <menu name='删除标签' ct='labe' ac='del' display='none' />
-            <menu name='保存标签' ct='labe' ac='save' display='none' />
-        </menu>
-        <menu name='小说管理' class='fa fa-users'>
-            <menu name='会员列表' ct='member' ac='index' reload='1' />
-            <menu name='会员添加' ct='member' ac='add' display='none' />
-            <menu name='会员修改' ct='member' ac='edit' display='none' />
-            <menu name='会员删除' ct='member' ac='del' display='none' />
-        </menu>
-        <menu name='帖子管理' class='fa fa-users'>
-            <menu name='会员列表' ct='member' ac='index' reload='1' />
-            <menu name='会员添加' ct='member' ac='add' display='none' />
-            <menu name='会员修改' ct='member' ac='edit' display='none' />
-            <menu name='会员删除' ct='member' ac='del' display='none' />
-        </menu>
+    <menu name='客户管理' class='fa fa-users'>
+        <menu name='客户列表' class='fa fa-users' ct='member' ac='index' reload='1' />
+        <menu name='客户添加' ct='member' ac='add' display='none' />
+        <menu name='客户修改' ct='member' ac='edit' display='none' />
+        <menu name='客户删除' ct='member' ac='del' display='none' />
     </menu>
     <!-- //这里的子菜单为隐性项目 -->
-    <menu name='常用' class='fa fa-th-list'>    
+    <menu name='常用' class='fa fa-th-list'>
         <menu name='内容管理' class='fa fa-file'>
             <menu name='内容列表' ct='content' ac='index' reload='1' default='1' />
             <menu name='内容添加' ct='content' ac='add' display='none' />
@@ -45,12 +17,6 @@
             <menu name='{lang.menu_content_category_add}'    ct='category' ac='add' display='none' />
             <menu name='{lang.menu_content_category_update}' ct='category' ac='edit' display='none' />
             <menu name='{lang.menu_content_category_delete}' ct='category' ac='del' display='none'  />
-        </menu>
-        <menu name='会员管理' class='fa fa-users'>
-            <menu name='会员列表' ct='member' ac='index' reload='1' />
-            <menu name='会员添加' ct='member' ac='add' display='none' />
-            <menu name='会员修改' ct='member' ac='edit' display='none' />
-            <menu name='会员删除' ct='member' ac='del' display='none' />
         </menu>
     </menu>
     <menu name='系统' class='fa fa-gear'>

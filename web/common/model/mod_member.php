@@ -15,6 +15,7 @@ class mod_member extends mod_base
 
     public static $_field = [
         'member_id', 'username', 'nickname', 'password', 'balance','sex','email', 'avator','status',
+        'company_name', 'mobile',
         'create_user', 'create_time', 'update_user', 'update_time'
     ];
 
