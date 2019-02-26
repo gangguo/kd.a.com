@@ -1,0 +1,7 @@
+2019-02-26 22:23:51 [info] --> common\model\mod_send_goods::send_sms - 发货短信通知结果: '<?xml version="1.0" encoding="utf-8"?>
+<SubmitResult xmlns="http://106.ihuyi.com/">
+<code>4072</code>
+<msg>你提交过来的短信内容必须与报备过的模板格式相匹配</msg>
+<smsid>0</smsid>
+</SubmitResult>
+'
