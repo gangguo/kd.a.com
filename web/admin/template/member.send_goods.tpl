@@ -51,7 +51,7 @@
                         <div class="form-group">
                             <label class="col-sm-2 control-label"><code>*</code> 车牌号码 :</label>
                             <div class="col-sm-4">
-                                <input name="car_num"  type="text" class="form-control" datatype="*" nullmsg="请输入车牌号码"
+                                <input name="car_num"  type="text" class="form-control" datatype="*1-20" nullmsg="请输入车牌号码"
                                        value="<{if empty($data['car_num'])}><{else}><{$data.car_num}><{/if}>" />
                             </div>
                         </div>

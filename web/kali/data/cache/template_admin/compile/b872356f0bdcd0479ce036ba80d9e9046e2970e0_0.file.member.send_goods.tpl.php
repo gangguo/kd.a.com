@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32-dev-45, created on 2019-02-26 21:46:06
+/* Smarty version 3.1.32-dev-45, created on 2019-02-28 19:01:12
   from '/Users/gangkui/wwwroot/www/kd.a.com/web/admin/template/member.send_goods.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32-dev-45',
-  'unifunc' => 'content_5c75431e489984_73919862',
+  'unifunc' => 'content_5c77bf78974070_56614264',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b872356f0bdcd0479ce036ba80d9e9046e2970e0' => 
     array (
       0 => '/Users/gangkui/wwwroot/www/kd.a.com/web/admin/template/member.send_goods.tpl',
-      1 => 1551188763,
+      1 => 1551351665,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:public/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5c75431e489984_73919862 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c77bf78974070_56614264 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/gangkui/wwwroot/www/kd.a.com/web/kali/core/lib/smarty_plugins/function.form_token.php','function'=>'smarty_function_form_token',),1=>array('file'=>'/Users/gangkui/wwwroot/www/kd.a.com/web/kali/core/lib/smarty_plugins/function.request_em.php','function'=>'smarty_function_request_em',),2=>array('file'=>'/Users/gangkui/wwwroot/www/kd.a.com/web/kali/core/lib/smarty/plugins/modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
 $_smarty_tpl->_subTemplateRender("file:public/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -81,7 +81,7 @@ $_smarty_tpl->_subTemplateRender("file:public/header.tpl", $_smarty_tpl->cache_i
                         <div class="form-group">
                             <label class="col-sm-2 control-label"><code>*</code> 车牌号码 :</label>
                             <div class="col-sm-4">
-                                <input name="car_num"  type="text" class="form-control" datatype="*" nullmsg="请输入车牌号码"
+                                <input name="car_num"  type="text" class="form-control" datatype="*1-20" nullmsg="请输入车牌号码"
                                        value="<?php if (empty($_smarty_tpl->tpl_vars['data']->value['car_num'])) {
 } else {
 echo $_smarty_tpl->tpl_vars['data']->value['car_num'];
