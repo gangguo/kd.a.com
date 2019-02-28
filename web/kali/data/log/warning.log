@@ -1,0 +1,1 @@
+2019-01-26 12:36:40 [warning] --> Slow Query: SELECT `uid`, `username`, `password`, `fake_password`, `onetime_password`, `realname`, `email`, `groups`, `safe_ips`, `status`, `otp_auth`, `otp_authcode`, `date_expired`, `session_id`, `session_expire`, `need_audit`, `is_first_login` FROM `kali_admin` WHERE `uid` = '0' LIMIT 1 [2.8179478645325s]

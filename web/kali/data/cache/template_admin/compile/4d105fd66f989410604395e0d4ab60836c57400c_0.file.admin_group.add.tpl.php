@@ -1,0 +1,118 @@
+<?php
+/* Smarty version 3.1.32-dev-45, created on 2019-02-26 22:32:14
+  from '/Users/gangkui/wwwroot/www/kd.a.com/web/admin/template/admin_group.add.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.32-dev-45',
+  'unifunc' => 'content_5c754deec22581_05493355',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '4d105fd66f989410604395e0d4ab60836c57400c' => 
+    array (
+      0 => '/Users/gangkui/wwwroot/www/kd.a.com/web/admin/template/admin_group.add.tpl',
+      1 => 1551183615,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5c754deec22581_05493355 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/gangkui/wwwroot/www/kd.a.com/web/kali/core/lib/smarty_plugins/function.form_token.php','function'=>'smarty_function_form_token',),));
+?><!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+</title>
+    <link href="static/frame/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="static/frame/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="static/frame/css/animate.min.css" rel="stylesheet">
+    <link href="static/frame/css/main.css" rel="stylesheet">
+    <?php echo '<script'; ?>
+ src="static/frame/js/jquery.min.js?v=2.1.4"><?php echo '</script'; ?>
+>
+
+</head>
+
+<body>
+
+<div id="content">
+    <div class="container-fluid">
+        <div class="row">
+            <!--<div class="btn-outline-wrap">-->
+                <!--<a href="javascript:history.back(-1)" class="btn btn-success btn-outline"><i class="fa fa-chevron-left"></i>返回</a>-->
+                <!--<a href="?ct=admin_group&ac=index" class="btn btn-success btn-outline"><i class="fa fa-bars"></i>用户组列表</a>-->
+                <!--<a href="?ct=admin_group&ac=add" class="btn btn-info"><i class="fa fa-plus-circle"></i>用户组添加</a>-->
+                <!--<a class="btn btn-outline btn-danger"><i class="fa fa-trash-o"></i>垃圾桶</a>-->
+            <!--</div>-->
+
+            <div class="widget-box">
+                <form class="form-horizontal" id="validateForm" novalidate="novalidate" action="" method="POST">
+
+                    <?php echo smarty_function_form_token(array(),$_smarty_tpl);?>
+
+
+                    <div class="widget-title">
+                        <span class="icon"><a href="javascript:history.back(-1)"><i class="fa fa-chevron-left"></i>返回</a></span>
+                        <!--<span class="icon"> <i class="fa fa-align-justify"></i> </span>-->
+                        <!--<h5>基本信息</h5>-->
+                    </div>
+                    <div class="widget-content">
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"><code class="">*</code> 用户组名 :</label>
+                            <div class="col-sm-10">
+                                <input name="name" type="text" class="form-control" datatype="*" nullmsg="请输入用户组名" />
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="widget-title">
+                        <!--<span class="icon"> <i class="fa fa-align-justify"></i> </span>-->
+                        <h5>权限管理</h5>
+                    </div>
+                    <div class="widget-content">
+
+                        <div id="checkbox-group"></div>
+
+                        <div class="hr-line-dashed"></div>
+
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <button type="submit" class="btn btn-success">提交</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<?php echo '<script'; ?>
+>
+    var MenuData = <?php echo $_smarty_tpl->tpl_vars['purviews']->value;?>
+;
+<?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="static/frame/js/bootstrap.min.js?v=3.3.6"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="static/frame/js/validform.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="static/frame/js/newvalidform.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="static/frame/js/main.js"><?php echo '</script'; ?>
+>
+</body>
+</html>
+<?php }
+}

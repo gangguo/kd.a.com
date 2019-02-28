@@ -2,73 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0de866a0-c336-4eb5-b7de-774dcdf3e0b9" name="默认" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/video.a.com_2019-02-24.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/video.a.com_2019-02-25.sql" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin/config/database.php" afterPath="$PROJECT_DIR$/web/admin/config/database.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/cfc_data.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/cfc_data.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/0861f5e126639323821e6d28cb335c467394a5fa_0.file.index2.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/0861f5e126639323821e6d28cb335c467394a5fa_0.file.index2.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/0907efbc4ef8b4e43560ec2c5fdd2d1d2aeb27ed_0.file.msgbox.show.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/0907efbc4ef8b4e43560ec2c5fdd2d1d2aeb27ed_0.file.msgbox.show.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/15f2964ce332ab721bc2db5d5ea398c05b48573c_0.file.member.add.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/15f2964ce332ab721bc2db5d5ea398c05b48573c_0.file.member.add.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/18608da57519b8f1fbcae2df6761a37f705211e6_0.file.customer.index.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/18608da57519b8f1fbcae2df6761a37f705211e6_0.file.customer.index.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/1f2c03e089b491992d7aae875d30b2d11c2b2d5e_0.file.file.index.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/1f2c03e089b491992d7aae875d30b2d11c2b2d5e_0.file.file.index.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/2759907ebf29ff33430163093234b95dd4d8477a_0.file.content.add.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/2759907ebf29ff33430163093234b95dd4d8477a_0.file.content.add.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/390cd3a15cfb5fdb65b48a3c0ae75f8193f2584b_0.file.member.index.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/390cd3a15cfb5fdb65b48a3c0ae75f8193f2584b_0.file.member.index.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/3af6c1778ac50ffd84ffc662eb49397e190b1367_0.file.cate.edit.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/3af6c1778ac50ffd84ffc662eb49397e190b1367_0.file.cate.edit.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/3db7291591f831dea9798b9db9a440d88a8f6be4_0.file.member.edit.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/3db7291591f831dea9798b9db9a440d88a8f6be4_0.file.member.edit.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/40e92d8092461dd710a1aa43e0a68aed145be6e8_0.file.content.index.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/40e92d8092461dd710a1aa43e0a68aed145be6e8_0.file.content.index.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/413b6ffc53a575d0320740a80d5ba90853fdaab4_0.file.file.edit.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/413b6ffc53a575d0320740a80d5ba90853fdaab4_0.file.file.edit.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/4af4c7a36546f65d703c426cf2bcd96e5d4ec5a0_0.file.content.add.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/4af4c7a36546f65d703c426cf2bcd96e5d4ec5a0_0.file.content.add.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/4d105fd66f989410604395e0d4ab60836c57400c_0.file.admin_group.add.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/4d105fd66f989410604395e0d4ab60836c57400c_0.file.admin_group.add.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/4e4bcd2a52499f8cb18849fe4273b77e491ba4f5_0.file.header.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/4e4bcd2a52499f8cb18849fe4273b77e491ba4f5_0.file.header.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/55177bb1ba7ba5db45ba21360342a3808b436f46_0.file.header.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/55177bb1ba7ba5db45ba21360342a3808b436f46_0.file.header.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/564a235dd8691fa703e9c0c0ef2197000b078b99_0.file.cate.index.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/564a235dd8691fa703e9c0c0ef2197000b078b99_0.file.cate.index.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/57d962dc1b4017a601516faecb78c6bc85c22e77_0.file.admin.edit.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/57d962dc1b4017a601516faecb78c6bc85c22e77_0.file.admin.edit.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/5b89eb36d310eb24352c95b345fe94b12f0b3c7e_0.file.admin.index.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/5b89eb36d310eb24352c95b345fe94b12f0b3c7e_0.file.admin.index.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/6a14bbccc8116a03b0718a4d0013620244d35ec0_0.file.member.edit.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/6a14bbccc8116a03b0718a4d0013620244d35ec0_0.file.member.edit.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/6ef7283b3edfbfbce2bee1d5dc798b725a6acbf4_0.file.admin.editpwd.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/6ef7283b3edfbfbce2bee1d5dc798b725a6acbf4_0.file.admin.editpwd.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/761420bbd378a051b3fd296b3aed489650da5f19_0.file.index2.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/761420bbd378a051b3fd296b3aed489650da5f19_0.file.index2.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/7f4d9a39a89438f8d44670966debf5078c80fa59_0.file.cate.add.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/7f4d9a39a89438f8d44670966debf5078c80fa59_0.file.cate.add.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/8685aa1d1f7455d33b157a217685fea78a9c51e4_0.file.login.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/8685aa1d1f7455d33b157a217685fea78a9c51e4_0.file.login.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/950700623d497cf028eac4d769ca1567b1f9c04d_0.file.footer.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/950700623d497cf028eac4d769ca1567b1f9c04d_0.file.footer.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/9da073069abbf2168c29d2b804d30e7c162b6922_0.file.labe.add.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/9da073069abbf2168c29d2b804d30e7c162b6922_0.file.labe.add.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/9fad7045085434bd3313f8cfa48cd84ecfbb99da_0.file.labe.edit.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/9fad7045085434bd3313f8cfa48cd84ecfbb99da_0.file.labe.edit.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/a0bd82a544eb41122cc7bc2f4120445350cd972e_0.file.file.add.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/a0bd82a544eb41122cc7bc2f4120445350cd972e_0.file.file.add.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/a4af1a97ad7eb0a3f63a29cae56a6d7ec0ba0e9f_0.file.content.index.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/a4af1a97ad7eb0a3f63a29cae56a6d7ec0ba0e9f_0.file.content.index.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/a8ce670ea4a292a43d857d288689cf51b7bcf5e9_0.file.member.add.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/a8ce670ea4a292a43d857d288689cf51b7bcf5e9_0.file.member.add.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/a99752be8a8ec9e4937cde5fa3bf32558199db2e_0.file.msgbox.show.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/a99752be8a8ec9e4937cde5fa3bf32558199db2e_0.file.msgbox.show.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/a9af3fe0fd9ec0d59a99aec90ff8b2360f857354_0.file.member.index.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/a9af3fe0fd9ec0d59a99aec90ff8b2360f857354_0.file.member.index.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/af822f133c630da59650297de1cbdbdce08c3467_0.file.content.index.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/af822f133c630da59650297de1cbdbdce08c3467_0.file.content.index.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/b872356f0bdcd0479ce036ba80d9e9046e2970e0_0.file.member.send_goods.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/b872356f0bdcd0479ce036ba80d9e9046e2970e0_0.file.member.send_goods.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/ba3a0b6fd36c32d25ba34482eb79b82d184910f8_0.file.msgbox.show.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/ba3a0b6fd36c32d25ba34482eb79b82d184910f8_0.file.msgbox.show.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/c1591ae3a5144b7f586169b99c94cdfc21cc21cb_0.file.admin_group.index.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/c1591ae3a5144b7f586169b99c94cdfc21cc21cb_0.file.admin_group.index.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/c3755829fd83dcbce22757907d7a7f7d1536a6f6_0.file.index2.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/c3755829fd83dcbce22757907d7a7f7d1536a6f6_0.file.index2.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/c542051c79b7e8b5edd62d253d9335d7cceb674a_0.file.admin.add.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/c542051c79b7e8b5edd62d253d9335d7cceb674a_0.file.admin.add.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/cfae2647b83d6791acdb1fd47283ba6b7f20b358_0.file.type.index.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/cfae2647b83d6791acdb1fd47283ba6b7f20b358_0.file.type.index.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/d01ee637e6a2e320fa4742059586b5dc1bb1e046_0.file.file.index.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/d01ee637e6a2e320fa4742059586b5dc1bb1e046_0.file.file.index.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/d4cb2abcea58f043f1080caf4ada9a6d8d3ebe1a_0.file.login.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/d4cb2abcea58f043f1080caf4ada9a6d8d3ebe1a_0.file.login.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/d51767ef6a39183bc0a559ddcc7daca9572051b3_0.file.admin_group.edit.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/d51767ef6a39183bc0a559ddcc7daca9572051b3_0.file.admin_group.edit.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/e3ec7d339fb4fd7b50d90250721a7533dc3a0be2_0.file.footer.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/e3ec7d339fb4fd7b50d90250721a7533dc3a0be2_0.file.footer.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/e572f3de46f1467cc0e0adbda16c542d0975e692_0.file.login.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/e572f3de46f1467cc0e0adbda16c542d0975e692_0.file.login.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/e8fa07e1bd82ddf66f36869a703438fa173daadc_0.file.category.index.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/e8fa07e1bd82ddf66f36869a703438fa173daadc_0.file.category.index.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/f9994b256ba20b7d8610dbdca4b798ad5736b1dd_0.file.admin.mypurview.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/f9994b256ba20b7d8610dbdca4b798ad5736b1dd_0.file.admin.mypurview.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/fac7ab3dd1a57efa9dc61f035a5eb052458f4e6f_0.file.labe.index.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_admin/compile/fac7ab3dd1a57efa9dc61f035a5eb052458f4e6f_0.file.labe.index.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/10987e985717521d1e61b6d2f8ecc25872c88e75_0.file.list.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/10987e985717521d1e61b6d2f8ecc25872c88e75_0.file.list.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/166699ab19a5c96a9a2dae9cb293c91c4c4ea556_0.file.login.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/166699ab19a5c96a9a2dae9cb293c91c4c4ea556_0.file.login.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/16d178cd94e82022e1316bf10802976e5e013cdf_0.file.header.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/16d178cd94e82022e1316bf10802976e5e013cdf_0.file.header.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/1e60e85d865efbb7dad90395820302fb8d27ca72_0.file.index.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/1e60e85d865efbb7dad90395820302fb8d27ca72_0.file.index.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/50e0b54cdb1af853d33d983abe0c85d31ed8b32a_0.file.login.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/50e0b54cdb1af853d33d983abe0c85d31ed8b32a_0.file.login.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/5b7e3c5330f058a50795f06c1163e4ed13f0f5f3_0.file.footer.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/5b7e3c5330f058a50795f06c1163e4ed13f0f5f3_0.file.footer.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/5bc87f16cd9dda201a65b6b3249472d1f51ad8ce_0.file.list.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/5bc87f16cd9dda201a65b6b3249472d1f51ad8ce_0.file.list.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/60ca34bdfb3def25e3ffe2b3b0abe4cdb0ebc3b6_0.file.footer.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/60ca34bdfb3def25e3ffe2b3b0abe4cdb0ebc3b6_0.file.footer.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/65bacf1d5ae25d8b34f1ebc5595e850c74f0a2e6_0.file.regist.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/65bacf1d5ae25d8b34f1ebc5595e850c74f0a2e6_0.file.regist.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/886bab9417f1dfe6af45fcbb70635efb83f78765_0.file.footer.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/886bab9417f1dfe6af45fcbb70635efb83f78765_0.file.footer.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/9257322cbac3d881c6903fa95808e76277496fa1_0.file.index.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/9257322cbac3d881c6903fa95808e76277496fa1_0.file.index.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/9af5e2d292bd0330e1b54a4a1d738c86db686e6f_0.file.login.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/9af5e2d292bd0330e1b54a4a1d738c86db686e6f_0.file.login.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/d2b05875eb5920b20cba0097c0845e0d7197f79e_0.file.header.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/d2b05875eb5920b20cba0097c0845e0d7197f79e_0.file.header.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/eb361ccf33cc0d24b6961d6eabdb8931857af461_0.file.header.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/eb361ccf33cc0d24b6961d6eabdb8931857af461_0.file.header.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/ebcb9a110503475c9311e2d2e14a060239b5047a_0.file.detail.tpl.php" afterPath="$PROJECT_DIR$/web/kali/data/cache/template_index/compile/ebcb9a110503475c9311e2d2e14a060239b5047a_0.file.detail.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/log/debug.log" afterPath="$PROJECT_DIR$/web/kali/data/log/debug.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/kali/data/log/notice.log" afterPath="$PROJECT_DIR$/web/kali/data/log/notice.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -102,12 +39,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/admin/config/database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+            <state relative-caret-position="255">
+              <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db_connection.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/kali/core/database/db_connection.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="252" column="21" lean-forward="false" selection-start-line="252" selection-start-column="21" selection-end-line="252" selection-end-column="21" />
+              <folding>
+                <marker date="1551183615803" expanded="true" signature="31350:31362" ph="DELETE FROM " />
+                <marker date="1551183615803" expanded="true" signature="33456:33536" ph="INSERT INTO ...... " />
+                <marker date="1551183615803" expanded="true" signature="33472:33508" ph="SELECT state... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -179,16 +130,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="member.index.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/admin/template/member.index.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="85" lean-forward="false" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="85" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -196,6 +137,7 @@
       <find>用户</find>
       <find>M%</find>
       <find>utf8mb4</find>
+      <find>Exception($config['host'].':'.$config['port'], 3001)</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -318,12 +260,12 @@
       <workItem from="1551187821905" duration="1767000" />
       <workItem from="1551189979870" duration="2762000" />
       <workItem from="1551239796294" duration="280000" />
-      <workItem from="1551349365531" duration="24000" />
+      <workItem from="1551349365531" duration="235000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8184000" />
+    <option name="totallyTimeSpent" value="8395000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
@@ -333,6 +275,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -343,7 +286,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -354,19 +296,14 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/admin/config/admin_menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/admin/control/ctl_member.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
@@ -738,9 +675,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/admin/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        <state relative-caret-position="255">
+          <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/kali/core/database/db_connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="252" column="21" lean-forward="false" selection-start-line="252" selection-start-column="21" selection-end-line="252" selection-end-column="21" />
+          <folding>
+            <marker date="1551183615803" expanded="true" signature="31350:31362" ph="DELETE FROM " />
+            <marker date="1551183615803" expanded="true" signature="33456:33536" ph="INSERT INTO ...... " />
+            <marker date="1551183615803" expanded="true" signature="33472:33508" ph="SELECT state... " />
+          </folding>
         </state>
       </provider>
     </entry>
