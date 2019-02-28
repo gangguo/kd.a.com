@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0de866a0-c336-4eb5-b7de-774dcdf3e0b9" name="默认" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin/config/admin_menu.xml" afterPath="$PROJECT_DIR$/web/admin/config/admin_menu.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin/template/otp_enable.bind.tpl" afterPath="$PROJECT_DIR$/web/admin/template/otp_enable.bind.tpl" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,14 +24,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ctl_member.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ctl_member.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/admin/control/ctl_member.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="38" column="30" lean-forward="false" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="30" />
+            <state relative-caret-position="85">
+              <caret line="29" column="34" lean-forward="true" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
               <folding>
                 <element signature="e#34#53#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="otp_enable.bind.tpl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/admin/template/otp_enable.bind.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="84" column="15" lean-forward="false" selection-start-line="84" selection-start-column="15" selection-end-line="84" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -55,6 +65,7 @@
       <find>utf8mb4</find>
       <find>Exception($config['host'].':'.$config['port'], 3001)</find>
       <find>send_goods</find>
+      <find>创</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -77,6 +88,7 @@
         <option value="$PROJECT_DIR$/web/admin/config/database.php" />
         <option value="$PROJECT_DIR$/web/web_admin/index.php" />
         <option value="$PROJECT_DIR$/web/admin/config/admin_menu.xml" />
+        <option value="$PROJECT_DIR$/web/admin/template/otp_enable.bind.tpl" />
       </list>
     </option>
   </component>
@@ -197,12 +209,12 @@
       <workItem from="1551187821905" duration="1767000" />
       <workItem from="1551189979870" duration="2762000" />
       <workItem from="1551239796294" duration="280000" />
-      <workItem from="1551349365531" duration="694000" />
+      <workItem from="1551349365531" duration="851000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8854000" />
+    <option name="totallyTimeSpent" value="9011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
@@ -214,7 +226,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24969475" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24969475" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -241,14 +253,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/admin/template/member.send_goods.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="66" column="84" lean-forward="false" selection-start-line="66" selection-start-column="84" selection-end-line="66" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/common/model/mod_file.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -575,11 +579,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="426">
           <caret line="252" column="21" lean-forward="false" selection-start-line="252" selection-start-column="21" selection-end-line="252" selection-end-column="21" />
-          <folding>
-            <marker date="1551183615803" expanded="true" signature="31350:31362" ph="DELETE FROM " />
-            <marker date="1551183615803" expanded="true" signature="33456:33536" ph="INSERT INTO ...... " />
-            <marker date="1551183615803" expanded="true" signature="33472:33508" ph="SELECT state... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -620,11 +620,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/admin/control/ctl_member.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="38" column="30" lean-forward="false" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="30" />
+        <state relative-caret-position="85">
+          <caret line="29" column="34" lean-forward="true" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
           <folding>
             <element signature="e#34#53#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/template/otp_enable.bind.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="84" column="15" lean-forward="false" selection-start-line="84" selection-start-column="15" selection-end-line="84" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>

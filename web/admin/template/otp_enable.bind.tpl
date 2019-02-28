@@ -78,11 +78,11 @@
         </div>
     </article>
     <footer>
-        <div class="" style="margin-top: 100px;text-align: center">
+        <!--div class="" style="margin-top: 100px;text-align: center">
             <p>傲创网络科技 ©
                 <a href="#" target="_blank">ultron.com</a>
             </p>
-        </div>
+        </div-->
     </footer>
 </div>
 
