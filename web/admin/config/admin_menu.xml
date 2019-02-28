@@ -5,6 +5,9 @@
         <menu name='客户添加' ct='member' ac='add' display='none' />
         <menu name='客户修改' ct='member' ac='edit' display='none' />
         <menu name='客户删除' ct='member' ac='del' display='none' />
+        <menu name='客户保存' ct='member' ac='save' display='none' />
+        <menu name='发货通知' ct='member' ac='send_goods' display='none' />
+
     </menu>
     <!-- //这里的子菜单为隐性项目 -->
     <menu name='常用' class='fa fa-th-list'>
