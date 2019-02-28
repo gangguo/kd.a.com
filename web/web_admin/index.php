@@ -32,7 +32,7 @@ $purview_config = [
 
 # APP信息
 $app_config = [
-    'app_title'         => 'KALIPHP',                   // APP标题
+    'app_title'         => '跟单系统',                   // APP标题
     'app_name'          => 'admin',                       // APP名称，app代码和模版都受到这个控制
     'session_start'     => true,                        // 是否启用session
     'purview_config'    => $purview_config,             // 权限控制程序信息
