@@ -1,4 +1,5 @@
 <?php
+
 header('Content-Type: text/html; charset=utf-8');
 
 require_once __DIR__.'/../kali/core/autoloader.php';
@@ -45,6 +46,5 @@ if ( !(req::item('ct') == 'index' && req::item('ac') == 'index') )
     // 所有访问开启程序分析器
     //cls_profiler::instance()->enable_profiler(true);
 }
-
 // 运行MVC
 kali::run();
