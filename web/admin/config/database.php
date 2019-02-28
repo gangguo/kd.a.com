@@ -4,7 +4,7 @@ return [
     'config' => [
         'user'       => 'root',
         'pass'       => 'admin999',
-        'name'       => 'video.a.com',
+        'name'       => 'kd.a.com',
         'charset'    => 'utf8',
         'collation'  => 'utf8_unicode_ci',
         'prefix'     => 'vd',

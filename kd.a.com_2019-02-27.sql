@@ -6,8 +6,8 @@
 # https://github.com/sequelpro/sequelpro
 #
 # Host: 127.0.01 (MySQL 5.7.20-log)
-# Database: video.a.com
-# Generation Time: 2019-02-24 10:49:51 +0000
+# Database: kd.a.com
+# Generation Time: 2019-02-27 03:37:28 +0000
 # ************************************************************
 
 
@@ -26,41 +26,40 @@
 DROP TABLE IF EXISTS `vd_admin`;
 
 CREATE TABLE `vd_admin` (
-  `uid` char(32) CHARACTER SET utf8 NOT NULL DEFAULT '' COMMENT '管理id',
-  `groups` varchar(1000) CHARACTER SET utf8 NOT NULL DEFAULT '' COMMENT '权限组',
-  `username` varchar(20) CHARACTER SET utf8 DEFAULT NULL COMMENT '用户名',
-  `password` char(60) CHARACTER SET utf8 DEFAULT NULL COMMENT '用户密码',
-  `onetime_password` char(60) CHARACTER SET utf8 DEFAULT NULL,
-  `fake_password` char(60) CHARACTER SET utf8 DEFAULT NULL COMMENT '伪造密码',
-  `realname` varchar(50) CHARACTER SET utf8 DEFAULT NULL COMMENT '真实姓名',
-  `email` varchar(50) CHARACTER SET utf8 DEFAULT NULL COMMENT '邮箱',
-  `potato` varchar(20) CHARACTER SET utf8 DEFAULT NULL COMMENT 'Potato',
-  `safe_ips` varchar(200) CHARACTER SET utf8 DEFAULT NULL COMMENT '登陆IP限制',
+  `uid` char(32) NOT NULL DEFAULT '' COMMENT '管理id',
+  `groups` varchar(1000) NOT NULL DEFAULT '' COMMENT '权限组',
+  `username` varchar(20) DEFAULT NULL COMMENT '用户名',
+  `password` char(60) DEFAULT NULL COMMENT '用户密码',
+  `onetime_password` char(60) DEFAULT NULL,
+  `fake_password` char(60) DEFAULT NULL COMMENT '伪造密码',
+  `realname` varchar(50) DEFAULT NULL COMMENT '真实姓名',
+  `email` varchar(50) DEFAULT NULL COMMENT '邮箱',
+  `potato` varchar(20) DEFAULT NULL COMMENT 'Potato',
+  `safe_ips` varchar(200) DEFAULT NULL COMMENT '登陆IP限制',
   `is_first_login` tinyint(1) DEFAULT '1' COMMENT '是否首次登录',
   `date_expired` datetime DEFAULT NULL COMMENT '失效日期时间',
   `otp_auth` tinyint(1) DEFAULT '0' COMMENT 'MFA认证等级 0:禁用  1:启用  2:强制启用 [未使用]',
-  `otp_authcode` char(16) CHARACTER SET utf8 DEFAULT '' COMMENT 'MFA验证码',
+  `otp_authcode` char(16) DEFAULT '' COMMENT 'MFA验证码',
   `need_audit` tinyint(1) DEFAULT '0' COMMENT '登陆是否需要后台进行人工审核 0: 不需要 1:需要',
-  `session_id` varchar(32) CHARACTER SET utf8 DEFAULT '' COMMENT '登陆时session_id',
+  `session_id` varchar(32) DEFAULT '' COMMENT '登陆时session_id',
   `session_expire` int(11) DEFAULT '1440' COMMENT 'SESSION有效期，默认24分钟',
   `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '帐号状态 1:正常 0:禁止登陆',
   `regtime` int(11) NOT NULL DEFAULT '0' COMMENT '注册时间',
-  `regip` varchar(15) CHARACTER SET utf8 DEFAULT '' COMMENT '注册ip',
+  `regip` varchar(15) DEFAULT '' COMMENT '注册ip',
   `logintime` int(10) NOT NULL DEFAULT '0' COMMENT '最后登录时间',
-  `loginip` varchar(15) CHARACTER SET utf8 DEFAULT '' COMMENT '最后登录IP',
+  `loginip` varchar(15) DEFAULT '' COMMENT '最后登录IP',
   PRIMARY KEY (`uid`),
   UNIQUE KEY `userid` (`username`),
   KEY `status` (`status`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户表';
 
 LOCK TABLES `vd_admin` WRITE;
 /*!40000 ALTER TABLE `vd_admin` DISABLE KEYS */;
 
 INSERT INTO `vd_admin` (`uid`, `groups`, `username`, `password`, `onetime_password`, `fake_password`, `realname`, `email`, `potato`, `safe_ips`, `is_first_login`, `date_expired`, `otp_auth`, `otp_authcode`, `need_audit`, `session_id`, `session_expire`, `status`, `regtime`, `regip`, `logintime`, `loginip`)
 VALUES
-	('1','1','admin','$2y$10$mnq6yQodeZ0JEaS5rhDqnOZjmmcqEWvyIVYh2AUvLRbZ4LdwaNO4e','','$2y$10$VM56RjPoP/pBdwWS2RdPO.f8jV1qXX7sHiHckLbALKvjgNqLIKVHG','管理员','seatle888@gmail.com','','',0,'2088-06-08 00:00:00',0,'',0,'6iktbon2l6auqoiaj12tf7bsq0',86400,1,1504873451,'10.10.12.25',1548562184,'127.0.0.1'),
-	('2e9223ebda358a1e265241b903a5be08','eecdcb7c1416183f6d02be982d4671c8','test1','$2y$10$5.4JR388VzRceZVzCjEDU.W9CDVr7f9aWtR.KMO4Br.0LXL/A5s5a',NULL,NULL,'test1','test1@test.local','','',0,NULL,0,'',0,'',1440,1,1544696251,'127.0.0.1',1544696738,'127.0.0.1'),
-	('eea83e86ad5c708bcd7b059ae6811184','3','test','$2y$10$Nn3vP5njpgFrQICNgLkxi.RCGPmIcR8MnW8aVAUqEid977xLaaGk.','',NULL,'test','','','',0,NULL,0,'',0,'',1440,1,1541403213,'127.0.0.1',1544258723,'127.0.0.1');
+	('1','1','admin','$2y$10$mnq6yQodeZ0JEaS5rhDqnOZjmmcqEWvyIVYh2AUvLRbZ4LdwaNO4e','','$2y$10$VM56RjPoP/pBdwWS2RdPO.f8jV1qXX7sHiHckLbALKvjgNqLIKVHG','管理员','seatle888@gmail.com','','',0,'2088-06-08 00:00:00',0,'',0,'hrvfuknscl0vq5nal2tg61ca50',86400,1,1504873451,'10.10.12.25',1551191587,'127.0.0.1'),
+	('637b311ecec8d0de38b1b9a3f72b63c8','2','kong','$2y$10$mnq6yQodeZ0JEaS5rhDqnOZjmmcqEWvyIVYh2AUvLRbZ4LdwaNO4e',NULL,NULL,'孔德新','','','',0,NULL,0,'',0,'',1440,1,1551184557,'127.0.0.1',1551191654,'127.0.0.1');
 
 /*!40000 ALTER TABLE `vd_admin` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -72,13 +71,13 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `vd_admin_group`;
 
 CREATE TABLE `vd_admin_group` (
-  `id` char(32) CHARACTER SET utf8 NOT NULL DEFAULT '' COMMENT 'ID',
-  `name` varchar(20) CHARACTER SET utf8 DEFAULT NULL COMMENT '用户组名称',
-  `purviews` text CHARACTER SET utf8 NOT NULL COMMENT '用户组权限',
+  `id` char(32) NOT NULL DEFAULT '' COMMENT 'ID',
+  `name` varchar(20) DEFAULT NULL COMMENT '用户组名称',
+  `purviews` text NOT NULL COMMENT '用户组权限',
   `uptime` int(10) DEFAULT NULL COMMENT '修改时间',
   `addtime` int(10) DEFAULT NULL COMMENT '添加时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户组表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户组表';
 
 LOCK TABLES `vd_admin_group` WRITE;
 /*!40000 ALTER TABLE `vd_admin_group` DISABLE KEYS */;
@@ -86,9 +85,10 @@ LOCK TABLES `vd_admin_group` WRITE;
 INSERT INTO `vd_admin_group` (`id`, `name`, `purviews`, `uptime`, `addtime`)
 VALUES
 	('1','超级管理员','*',1504839424,1504839424),
-	('2','普通管理员','content-index,content-add,content-edit,content-del,category-index,category-add,category-edit,category-del,member-index,member-add,member-edit,member-del,admin-editpwd,admin-editpwd_fake,admin-mypurview,admin_group-index,admin_group-add,admin_group-edit,admin_group-del,admin-index,admin-add,admin-edit,admin-del,admin-oplog,admin-login_log,config-index,config-add,config-edit,config-del,cache-index,cache-del,cache-clear,cache-redis_keys,cache-redis_info,filemanage-index,filemanage-add,filemanage-edit,filemanage-del,crond-index,crond-add,crond-edit,crond-del',1544696112,1504839539),
-	('3','测试人员','admin-editpwd_fake',1532783074,1504842647),
-	('eecdcb7c1416183f6d02be982d4671c8','test','content-index,content-add,content-edit,content-del,category-index,category-add,category-edit,category-del,member-index,member-add,member-edit,member-del',1544696709,1544696122);
+	('2','服务组','member-index,member-add,member-edit,member-del',1551191642,1504839539),
+	('3','司机组','',1551184488,1504842647),
+	('93a9750a78315f51e9b5cd82d9d9f901','白丁组','',1551191546,1551191546),
+	('eecdcb7c1416183f6d02be982d4671c8','客户组','',1551191530,1544696122);
 
 /*!40000 ALTER TABLE `vd_admin_group` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -101,19 +101,19 @@ DROP TABLE IF EXISTS `vd_admin_login`;
 
 CREATE TABLE `vd_admin_login` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
-  `uid` char(32) CHARACTER SET utf8 NOT NULL DEFAULT '' COMMENT '用户ID',
-  `username` varchar(60) CHARACTER SET utf8 NOT NULL DEFAULT '' COMMENT '用户名',
-  `session_id` varchar(32) CHARACTER SET utf8 DEFAULT NULL COMMENT 'SESSION ID',
-  `agent` varchar(500) CHARACTER SET utf8 DEFAULT NULL COMMENT '浏览器信息',
+  `uid` char(32) NOT NULL DEFAULT '' COMMENT '用户ID',
+  `username` varchar(60) NOT NULL DEFAULT '' COMMENT '用户名',
+  `session_id` varchar(32) DEFAULT NULL COMMENT 'SESSION ID',
+  `agent` varchar(500) DEFAULT NULL COMMENT '浏览器信息',
   `logintime` int(10) unsigned NOT NULL COMMENT '登录时间',
-  `loginip` varchar(15) CHARACTER SET utf8 NOT NULL DEFAULT '' COMMENT '登录IP',
-  `logincountry` varchar(2) NOT NULL DEFAULT '' COMMENT '登录国家',
+  `loginip` varchar(15) NOT NULL DEFAULT '' COMMENT '登录IP',
+  `logincountry` varchar(2) CHARACTER SET utf8mb4 NOT NULL DEFAULT '' COMMENT '登录国家',
   `loginsta` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '登录时状态 1=成功，0=失败',
-  `cli_hash` varchar(32) CHARACTER SET utf8 NOT NULL COMMENT '用户登录名和ip的hash',
+  `cli_hash` varchar(32) NOT NULL COMMENT '用户登录名和ip的hash',
   PRIMARY KEY (`id`),
   KEY `logintime` (`logintime`),
   KEY `cli_hash` (`cli_hash`,`loginsta`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户登陆记录表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户登陆记录表';
 
 LOCK TABLES `vd_admin_login` WRITE;
 /*!40000 ALTER TABLE `vd_admin_login` DISABLE KEYS */;
@@ -192,99 +192,14 @@ VALUES
 	(70,'1','admin','9e148564364eaf3ba9ef17a29e251cbd','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546832807,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
 	(71,'1','admin','5i7esl0m01hn5rfr7tb03gkk2r','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546844825,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
 	(72,'1','admin','afpgu0t73dreo2d0elsmafbfki','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546847810,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(73,'1','admin','m78a2mt8qns8nvq08huc91d584','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546848881,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(74,'1','admin','7uutnhgtj0h1qjc0j2g2s53uj5','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546849996,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(75,'1','admin','0r6d0mcm75054f38nrmn8g0mk8','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546850417,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(76,'1','admin','758c4818e551104b0f657a5a5b6d44f8','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546850364,'::1','',0,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(77,'1','admin','8644797907843d56d9cf6b8134627e13','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546850372,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(78,'1','admin','dvtn5gk1c7ccf49mh38ma5m5k3','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546856612,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(79,'1','admin','s18e0fkugdd640l0k1kqo255j7','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546857425,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(80,'1','admin','d4f3615236c2f62f8e4b58ae62c16349','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546858725,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(81,'1','admin','lan6j5si0caopha68facm4v4ta','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546859021,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(82,'1','admin','gjbvprj7n3aihkrinlaotv0mpa','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546860669,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(83,'1','admin','lfs0jpuohn174af8tekjnblvju','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546863260,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(84,'1','admin','l564pq0kv2aosdk33q73nor0fk','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546863909,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(85,'1','admin','kvpenffktmqhdqh8pucj44vgtd','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546866450,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(86,'1','admin','9qhur4ou2r54ghsu51dqcltj96','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546866507,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(87,'1','admin','0m786v2ikjk7bg85c0v86pqmlj','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546866597,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(88,'1','admin','l1kohvscvtmps4ljdnpq5as6r5','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546866618,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(89,'1','admin','i4i0dq63g0ke6sfofc9cuhqfep','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546871843,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(90,'1','admin','25pd4t7a0ee2gscafn08pevag9','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546873627,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(91,'1','admin','792f47440a163957fceba0572f8db5c0','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546873669,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(92,'1','admin','hocsu0en82cjcu803bjfve7gnu','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546873925,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(93,'1','admin','9cfcfd930fef783cedbcd01a412c5516','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546873911,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(94,'1','admin','18b57vm6focvjdntv7g3pqgik0','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546874185,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(95,'1','admin','914fbe69cfba22336bcc46f3e7bfa58d','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546874129,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(96,'1','admin','bfcb0816635cbf52e749d77b8a29e99e','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546915666,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(97,'1','admin','483d6f190adea098378eee3709537acd','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546915835,'::1','',0,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(98,'1','admin','ed24fb0353f5941313a7c16c34f6aa45','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546915844,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(99,'1','admin','f185f46c8469788bebdcf8da810a7896','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546916549,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(100,'1','admin','l14acf9mstro80fe31eajqfo0r','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546934700,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(101,'1','admin','ov8sqlbf1j5147k16n9h9mi0f6','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546943036,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(102,'1','admin','538737ee6638feecf51d555c6dee31da','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546943626,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(103,'1','admin','ueu18df0ra6s3t9sgjoucljasv','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546950359,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(104,'1','admin','pgtsmqe7o2dk2q4acqd9lh368j','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546951744,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(105,'1','admin','1ussebh6n2h9gs204n758t99th','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546952168,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(106,'1','admin','gb3qmjn1hqq8v5rseipvmb5ta0','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546952791,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(107,'1','admin','df887hhr5dmvmsssq7nv7jhrbc','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546953116,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(108,'1','admin','d3tc8trr132nldqg5637h10b10','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546954859,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(109,'1','admin','cs0p03logv89o8lng42b9fh4uh','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1546955377,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(110,'1','admin','081eb19d5d98d3a60453d9376aab328d','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547004054,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(111,'1','admin','85c00i7cja94ljnqjq6806tfls','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547007535,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(112,'1','admin','d41f970ba18a19190d2d74f14da8d0fc','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547118056,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(113,'1','admin','52192c999346f3623109c10eb39ad8a4','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547123892,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(114,'1','admin','po9c01bfjo1tcgispi600li843','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547130004,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(115,'1','admin','1e6cc1d1f1e982d24526b1086662217e','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547179677,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(116,'1','admin','ca0552baa87381190847de107e33c551','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547182081,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(117,'1','admin','2a9891f9695c0134ad4fd1808edcbfc3','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547199406,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(118,'1','admin','0217d57a1dc3ea2e249e49422c78a165','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547201126,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(119,'1','admin','2obmlaqu003okrvooqbaugr40m','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547281216,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(120,'1','admin','toq0c52uit344v07quctj76fcc','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547281231,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(121,'1','admin','5ea4cebabdea5f9c54acde5c84a7c6b0','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547450710,'::1','',0,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(122,'1','admin','34248b6fc9d8ca09b5ba3a055d9d912e','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547450725,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(123,'1','admin','ea2d2df8c385e94a80e148a33fbb0959','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547451010,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(124,'1','admin','af0ee6098f8de69bd8ab45f03bdc5d62','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547451173,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(125,'1','admin','a93607703c72175628da55c806762fe6','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547451533,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(126,'1','admin','34e406f6c97849b621a3ef4780ada98c','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547451550,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(127,'1','admin','18ioru8t3lg5v3u9m3l04vtm0t','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547529823,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(128,'1','admin','9qdnk0mbufp2k99pmgf2ns474a','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547529865,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(129,'1','admin','14444251c4daa13d7ba06fa96a456dd4','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547625258,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(130,'1','admin','88phn9fgtdj00hb4eqh9d8m9o0','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547632236,'127.0.0.1','',0,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(131,'1','admin','rjqm0vjhhkc0kjig4bntb90mtt','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547632241,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(132,'1','admin','ahcue9bacbfdrgkrfum5ppo2a2','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547632274,'127.0.0.1','',0,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(133,'1','admin','qfi13jodn6o0akq4ufoo8vijv7','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547632279,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(134,'1','admin','85k1kjdbfbmj6o1mp4h8t0t28b','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547634255,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(135,'1','admin','i47e07u11els6l9quu2dojp6j2','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547634263,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(136,'1','admin','f66eb9c8a2555cd01854a3adbea83dc8','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547710408,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(137,'1','admin','8i6ih3gbidp6m7itavinv8oim2','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547710957,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(138,'1','admin','653ea27db9852c5cdd4cd37f073ac236','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547711095,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(139,'1','admin','rn8l1d7q0jvfrgojukc31kr9tt','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547723224,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(140,'1','admin','c58ea041d823a88f821beaca44f9cef5','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547780795,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(141,'1','admin','bj99tmfdr6lqhc5pjigrdeg5ch','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547781958,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(142,'1','admin','ba016c497f86e8294b4d5e52a7f4c9aa','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547783958,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(143,'1','admin','8b715roapbaciec17lgvskh2t0','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547784992,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(144,'1','admin','aed164ec5fdf7cc1c8326637d13fe6ee','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547809423,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(145,'1','admin','8q7g8h98t87biuju13u0ujsqu4','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547811514,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(146,'1','admin','tp3g0jqvkqaeccedbmjn58e7bl','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547815834,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(147,'1','admin','1u1mdtjhbpm9uaonhpnt2plv0l','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547818241,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(148,'1','admin','krg7qmojgtknf9h51bt7o4jkaf','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.2 Safari/605.1.15',1547819159,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(149,'1','admin','c8lkfnurjakan3eq2ttckpcosn','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547819240,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(150,'1','admin','325f4d600ca64a0f38e1b5a10894510c','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547869341,'::1','',0,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(151,'1','admin','b8ce82185a2e6b5617bbe5704f3f7e87','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547869348,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(152,'1','admin','bbef8f00874c065db9f7105a073e09e1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547873597,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(153,'1','admin','36f19r0ndat3h4ncjbgmnie9pu','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547889151,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(154,'1','admin','oarifuj7h5at2d81iphpfoc020','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547889257,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(155,'1','admin','m5r1g48rk7pskv15jk5s7vd9re','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547889413,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(156,'1','admin','ifg1c616eaer9lvmmma75e4f2g','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547890322,'::1','',1,'7d70ceb86021ab9b59ddd11fdad0736e'),
-	(157,'1','admin','9huv2lhlmms30t1at9rkjlhp94','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547959355,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(158,'1','admin','ouivd40n7v7rem0fe59l0khp20','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1547959757,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(159,'1','admin','f81f8dssurak0ov5u47k2ke12e','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1548076633,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(160,'1','admin','or6aks57nvdumudqu0m4t0v3tu','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1548302090,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(161,'1','admin','q8upgee8g1nqepv6ce8bjkgm25','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1548477413,'127.0.0.1','',0,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(162,'1','admin','q5r6q0pted4ai0kv5phlinish5','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1548477419,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(163,'1','admin','t32l3gk1ntjun0o46v0l0v76b0','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1548492248,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(164,'1','admin','ul6ffb0b2jnbfp31mhkfir0uv6','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1548499918,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
-	(165,'1','admin','6iktbon2l6auqoiaj12tf7bsq0','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',1548562184,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d');
+	(173,'637b311ecec8d0de38b1b9a3f72b63c8','kong','0gomksaoih13klu7dvp8jv7d63','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',1551184659,'127.0.0.1','',0,'9f87da2dc584de0cdb9feb31cf0b94dc'),
+	(174,'637b311ecec8d0de38b1b9a3f72b63c8','kong','0s3c2jbi0q15ligdhb6ka4tfk6','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',1551184667,'127.0.0.1','',0,'9f87da2dc584de0cdb9feb31cf0b94dc'),
+	(175,'637b311ecec8d0de38b1b9a3f72b63c8','kong','llgbjddd3m23i68rvs2r0i3bl6','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',1551184689,'127.0.0.1','',1,'9f87da2dc584de0cdb9feb31cf0b94dc'),
+	(176,'1','admin','hqfs6va5iuraglt2pk1bkr1qj4','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',1551184784,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
+	(177,'637b311ecec8d0de38b1b9a3f72b63c8','kong','8gaspni18c8pt1v4j9tpkg2bp0','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.2 Safari/605.1.15',1551184917,'127.0.0.1','',1,'9f87da2dc584de0cdb9feb31cf0b94dc'),
+	(178,'637b311ecec8d0de38b1b9a3f72b63c8','kong','kknf8th9r5io00h71ked55p1l1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',1551191568,'127.0.0.1','',1,'9f87da2dc584de0cdb9feb31cf0b94dc'),
+	(179,'1','admin','hrvfuknscl0vq5nal2tg61ca50','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',1551191587,'127.0.0.1','',1,'7a0cb45999b8e15ec0dbb6164bf2857d'),
+	(180,'637b311ecec8d0de38b1b9a3f72b63c8','kong','hnrjesc9indplaqn9anl3i2ds1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.2 Safari/605.1.15',1551191654,'127.0.0.1','',1,'9f87da2dc584de0cdb9feb31cf0b94dc');
 
 /*!40000 ALTER TABLE `vd_admin_login` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -297,18 +212,18 @@ DROP TABLE IF EXISTS `vd_admin_oplog`;
 
 CREATE TABLE `vd_admin_oplog` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '项id',
-  `uid` char(32) CHARACTER SET utf8 DEFAULT NULL COMMENT '用户ID',
-  `username` varchar(20) CHARACTER SET utf8 NOT NULL DEFAULT '' COMMENT '管理员用户名',
-  `session_id` varchar(32) CHARACTER SET utf8 DEFAULT NULL COMMENT 'SESSION ID',
-  `msg` varchar(250) CHARACTER SET utf8 NOT NULL COMMENT '消息内容',
+  `uid` char(32) DEFAULT NULL COMMENT '用户ID',
+  `username` varchar(20) NOT NULL DEFAULT '' COMMENT '管理员用户名',
+  `session_id` varchar(32) DEFAULT NULL COMMENT 'SESSION ID',
+  `msg` varchar(250) NOT NULL COMMENT '消息内容',
   `do_time` int(10) unsigned NOT NULL COMMENT '发生时间',
-  `do_ip` varchar(15) CHARACTER SET utf8 NOT NULL COMMENT '客户端IP',
-  `do_country` char(2) CHARACTER SET utf8 NOT NULL DEFAULT '' COMMENT '国家',
-  `do_url` varchar(100) CHARACTER SET utf8 NOT NULL COMMENT '操作网址',
+  `do_ip` varchar(15) NOT NULL COMMENT '客户端IP',
+  `do_country` char(2) NOT NULL DEFAULT '' COMMENT '国家',
+  `do_url` varchar(100) NOT NULL COMMENT '操作网址',
   PRIMARY KEY (`id`),
   KEY `user_name` (`username`),
   KEY `do_time` (`do_time`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户操作日志';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户操作日志';
 
 LOCK TABLES `vd_admin_oplog` WRITE;
 /*!40000 ALTER TABLE `vd_admin_oplog` DISABLE KEYS */;
@@ -317,7 +232,22 @@ INSERT INTO `vd_admin_oplog` (`id`, `uid`, `username`, `session_id`, `msg`, `do_
 VALUES
 	(1,'1','admin','k8886vtapn5et2rbeang2r0icr','用户修改 1',1546683514,'127.0.0.1','-','?ct=admin&ac=edit&id=1&csrf_token_name=af8644435e0cf5b32300cd8c92aa3fe5&realname=管理员'),
 	(2,'1','admin','l1kohvscvtmps4ljdnpq5as6r5','用户修改 1',1546866632,'127.0.0.1','-','?ct=admin&ac=edit&id=1&csrf_token_name=d22be61de728934d1b542a3034d88134&realname=管理员'),
-	(3,'1','admin','c8lkfnurjakan3eq2ttckpcosn','用户修改 1',1547821097,'127.0.0.1','-','?ct=admin&ac=edit&id=1&csrf_token_name=2546b9f0ac874955948afb305609defc&realname=管理员');
+	(3,'1','admin','c8lkfnurjakan3eq2ttckpcosn','用户修改 1',1547821097,'127.0.0.1','-','?ct=admin&ac=edit&id=1&csrf_token_name=2546b9f0ac874955948afb305609defc&realname=管理员'),
+	(4,'1','admin','mr9t3gt7mldg1nki4m55hd6io1','用户组修改 eecdcb7c1416183f6d02be982d4671c8',1551184379,'127.0.0.1','-','?ct=admin_group&ac=edit&id=eecdcb7c1416183f6d02be982d4671c8'),
+	(5,'1','admin','mr9t3gt7mldg1nki4m55hd6io1','用户组修改 2',1551184441,'127.0.0.1','-','?ct=admin_group&ac=edit&id=2&csrf_token_name=5063ff3da6d3b6a3bfad02c5175953c0&name=服务组'),
+	(6,'1','admin','mr9t3gt7mldg1nki4m55hd6io1','用户组修改 eecdcb7c1416183f6d02be982d4671c8',1551184454,'127.0.0.1','-','?ct=admin_group&ac=edit&id=eecdcb7c1416183f6d02be982d4671c8'),
+	(7,'1','admin','mr9t3gt7mldg1nki4m55hd6io1','用户组修改 3',1551184488,'127.0.0.1','-','?ct=admin_group&ac=edit&id=3&csrf_token_name=4b218901b8b44d4c223d084f664a244c&name=司机组'),
+	(8,'1','admin','mr9t3gt7mldg1nki4m55hd6io1','用户组修改 2',1551184506,'127.0.0.1','-','?ct=admin_group&ac=edit&id=2&csrf_token_name=26c40fb6016d09cf8c91270afaa338dd&name=服务组'),
+	(9,'1','admin','mr9t3gt7mldg1nki4m55hd6io1','用户删除 eea83e86ad5c708bcd7b059ae6811184',1551184518,'127.0.0.1','-','?ct=admin&ac=del&ids=array()'),
+	(10,'1','admin','mr9t3gt7mldg1nki4m55hd6io1','用户删除 2e9223ebda358a1e265241b903a5be08',1551184522,'127.0.0.1','-','?ct=admin&ac=del&ids=array()'),
+	(11,'1','admin','mr9t3gt7mldg1nki4m55hd6io1','用户添加 637b311ecec8d0de38b1b9a3f72b63c8',1551184557,'127.0.0.1','-','?ct=admin&ac=add&csrf_token_name=76571e727f92f6c40eb5c1c09643dbfb&username=kong&realname=孔德新'),
+	(12,'1','admin','hqfs6va5iuraglt2pk1bkr1qj4','用户组修改 2',1551184882,'127.0.0.1','-','?ct=admin_group&ac=edit&id=2&csrf_token_name=2be5cc56c7ff00e6795dfd5c382a2410&name=服务组'),
+	(13,'1','admin','hqfs6va5iuraglt2pk1bkr1qj4','用户组修改 2',1551191500,'127.0.0.1','-','?ct=admin_group&ac=edit&id=2&csrf_token_name=d37b55e4e6ecbbea8ce7f66bdb53e885&name=服务组'),
+	(14,'1','admin','hqfs6va5iuraglt2pk1bkr1qj4','用户组修改 eecdcb7c1416183f6d02be982d4671c8',1551191527,'127.0.0.1','-','?ct=admin_group&ac=edit&id=eecdcb7c1416183f6d02be982d4671c8'),
+	(15,'1','admin','hqfs6va5iuraglt2pk1bkr1qj4','用户组修改 eecdcb7c1416183f6d02be982d4671c8',1551191530,'127.0.0.1','-','?ct=admin_group&ac=edit&id=eecdcb7c1416183f6d02be982d4671c8'),
+	(16,'1','admin','hqfs6va5iuraglt2pk1bkr1qj4','用户组添加 93a9750a78315f51e9b5cd82d9d9f901',1551191546,'127.0.0.1','-','?ct=admin_group&ac=add&csrf_token_name=2fcbffc4b22245c1d050aba71f190ccc&name=白丁组'),
+	(17,'1','admin','hrvfuknscl0vq5nal2tg61ca50','用户修改 637b311ecec8d0de38b1b9a3f72b63c8',1551191621,'127.0.0.1','-','?ct=admin&ac=edit&id=637b311ecec8d0de38b1b9a3f72b63c8'),
+	(18,'1','admin','hrvfuknscl0vq5nal2tg61ca50','用户组修改 2',1551191642,'127.0.0.1','-','?ct=admin_group&ac=edit&id=2&csrf_token_name=fe3ea5e12bcb7d98ea6af2823b1fd346&name=服务组');
 
 /*!40000 ALTER TABLE `vd_admin_oplog` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -329,10 +259,10 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `vd_admin_purview`;
 
 CREATE TABLE `vd_admin_purview` (
-  `uid` char(32) CHARACTER SET utf8 NOT NULL DEFAULT '' COMMENT '管理员ID',
-  `purviews` text CHARACTER SET utf8 NOT NULL COMMENT '配置字符',
+  `uid` char(32) NOT NULL DEFAULT '' COMMENT '管理员ID',
+  `purviews` text NOT NULL COMMENT '配置字符',
   PRIMARY KEY (`uid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户权限表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户权限表';
 
 LOCK TABLES `vd_admin_purview` WRITE;
 /*!40000 ALTER TABLE `vd_admin_purview` DISABLE KEYS */;
@@ -345,6 +275,41 @@ VALUES
 UNLOCK TABLES;
 
 
+# Dump of table vd_cate
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `vd_cate`;
+
+CREATE TABLE `vd_cate` (
+  `cate_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL DEFAULT '',
+  `show` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '是否在导航菜单上显示,1不现实，2显示',
+  `sort` tinyint(1) unsigned NOT NULL DEFAULT '100' COMMENT '排序',
+  `create_time` int(11) NOT NULL COMMENT '创建时间',
+  `create_user` char(32) NOT NULL DEFAULT '0',
+  `update_time` int(11) NOT NULL COMMENT '更新时间',
+  `update_user` char(32) NOT NULL DEFAULT '0',
+  `delete_time` int(11) NOT NULL DEFAULT '0' COMMENT '删除时间',
+  `delete_user` char(32) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`cate_id`),
+  KEY `delete_user` (`delete_user`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='类型表';
+
+LOCK TABLES `vd_cate` WRITE;
+/*!40000 ALTER TABLE `vd_cate` DISABLE KEYS */;
+
+INSERT INTO `vd_cate` (`cate_id`, `name`, `show`, `sort`, `create_time`, `create_user`, `update_time`, `update_user`, `delete_time`, `delete_user`)
+VALUES
+	(1,'java',1,1,1551080752,'1',1551096790,'1',0,'0'),
+	(2,'PHP',1,112,1551081223,'1',1551096784,'1',0,'0'),
+	(3,'c++',1,1,1551095876,'1',0,'0',0,'0'),
+	(4,'python',1,1,1551095886,'1',0,'0',0,'0'),
+	(5,'c#',1,1,1551095900,'1',0,'0',0,'0');
+
+/*!40000 ALTER TABLE `vd_cate` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
 # Dump of table vd_category
 # ------------------------------------------------------------
 
@@ -352,14 +317,14 @@ DROP TABLE IF EXISTS `vd_category`;
 
 CREATE TABLE `vd_category` (
   `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT '分类表',
-  `name` varchar(50) CHARACTER SET utf8 DEFAULT NULL COMMENT '名称',
+  `name` varchar(50) DEFAULT NULL COMMENT '名称',
   `sort` int(11) DEFAULT '100' COMMENT '排序',
-  `create_user` char(32) CHARACTER SET utf8 DEFAULT NULL COMMENT '创建用户',
+  `create_user` char(32) DEFAULT NULL COMMENT '创建用户',
   `create_time` int(10) DEFAULT NULL COMMENT '创建时间',
-  `update_user` char(32) CHARACTER SET utf8 DEFAULT NULL COMMENT '修改用户',
+  `update_user` char(32) DEFAULT NULL COMMENT '修改用户',
   `update_time` int(10) DEFAULT NULL COMMENT '修改时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='分类表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='分类表';
 
 LOCK TABLES `vd_category` WRITE;
 /*!40000 ALTER TABLE `vd_category` DISABLE KEYS */;
@@ -381,14 +346,14 @@ DROP TABLE IF EXISTS `vd_config`;
 
 CREATE TABLE `vd_config` (
   `sort` smallint(6) NOT NULL DEFAULT '0' COMMENT '排序id',
-  `name` varchar(30) CHARACTER SET utf8 NOT NULL DEFAULT '' COMMENT '变量名',
-  `value` text CHARACTER SET utf8 COMMENT '变量值',
-  `title` varchar(50) CHARACTER SET utf8 NOT NULL DEFAULT '' COMMENT '说明标题',
-  `group` varchar(10) CHARACTER SET utf8 NOT NULL DEFAULT '1' COMMENT '分组',
-  `type` varchar(10) CHARACTER SET utf8 NOT NULL DEFAULT 'string' COMMENT '变量类型',
+  `name` varchar(30) NOT NULL DEFAULT '' COMMENT '变量名',
+  `value` text COMMENT '变量值',
+  `title` varchar(50) NOT NULL DEFAULT '' COMMENT '说明标题',
+  `group` varchar(10) NOT NULL DEFAULT '1' COMMENT '分组',
+  `type` varchar(10) NOT NULL DEFAULT 'string' COMMENT '变量类型',
   PRIMARY KEY (`name`),
   KEY `sort` (`sort`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='系统配置变量表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='系统配置变量表';
 
 LOCK TABLES `vd_config` WRITE;
 /*!40000 ALTER TABLE `vd_config` DISABLE KEYS */;
@@ -428,17 +393,17 @@ DROP TABLE IF EXISTS `vd_content`;
 CREATE TABLE `vd_content` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '内容表',
   `catid` smallint(5) DEFAULT NULL COMMENT '分类ID',
-  `name` varchar(50) CHARACTER SET utf8 DEFAULT NULL COMMENT '名称',
-  `image` varchar(50) CHARACTER SET utf8 DEFAULT NULL COMMENT '封面图',
-  `images` varchar(2000) CHARACTER SET utf8 DEFAULT NULL COMMENT '套图',
-  `content` text CHARACTER SET utf8 COMMENT '内容',
-  `create_user` char(32) CHARACTER SET utf8 DEFAULT NULL COMMENT '创建用户',
+  `name` varchar(50) DEFAULT NULL COMMENT '名称',
+  `image` varchar(50) DEFAULT NULL COMMENT '封面图',
+  `images` varchar(2000) DEFAULT NULL COMMENT '套图',
+  `content` text COMMENT '内容',
+  `create_user` char(32) DEFAULT NULL COMMENT '创建用户',
   `create_time` int(10) DEFAULT NULL COMMENT '创建时间',
-  `update_user` char(32) CHARACTER SET utf8 DEFAULT NULL COMMENT '修改用户',
+  `update_user` char(32) DEFAULT NULL COMMENT '修改用户',
   `update_time` int(10) DEFAULT NULL COMMENT '修改时间',
   PRIMARY KEY (`id`),
   KEY `name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='内容表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='内容表';
 
 LOCK TABLES `vd_content` WRITE;
 /*!40000 ALTER TABLE `vd_content` DISABLE KEYS */;
@@ -487,7 +452,7 @@ CREATE TABLE `vd_coupons_log` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `cpns_id` int(10) unsigned NOT NULL,
   `use_time` int(11) unsigned NOT NULL,
-  `uid` char(32) NOT NULL DEFAULT '',
+  `member_id` bigint(20) NOT NULL,
   `ip` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -502,16 +467,16 @@ DROP TABLE IF EXISTS `vd_crond`;
 CREATE TABLE `vd_crond` (
   `id` smallint(6) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
   `sort` smallint(5) NOT NULL COMMENT '排序',
-  `name` varchar(50) CHARACTER SET utf8 NOT NULL DEFAULT '' COMMENT '任务名',
-  `filename` varchar(248) CHARACTER SET utf8 NOT NULL DEFAULT '' COMMENT '执行脚本',
-  `runtime_format` varchar(20) CHARACTER SET utf8 NOT NULL DEFAULT '' COMMENT '执行时间',
+  `name` varchar(50) NOT NULL DEFAULT '' COMMENT '任务名',
+  `filename` varchar(248) NOT NULL DEFAULT '' COMMENT '执行脚本',
+  `runtime_format` varchar(20) NOT NULL DEFAULT '' COMMENT '执行时间',
   `lasttime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '最后执行时间',
-  `runtime` varchar(30) CHARACTER SET utf8 NOT NULL DEFAULT '0' COMMENT '运行时间',
+  `runtime` varchar(30) NOT NULL DEFAULT '0' COMMENT '运行时间',
   `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '状态：1=启动 0=停止',
   `uptime` int(10) DEFAULT NULL COMMENT '更新时间',
   `addtime` int(10) DEFAULT NULL COMMENT '添加时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC COMMENT='计划任务表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='计划任务表';
 
 
 
@@ -546,20 +511,22 @@ CREATE TABLE `vd_down_log` (
 DROP TABLE IF EXISTS `vd_file`;
 
 CREATE TABLE `vd_file` (
-  `file_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '文件id',
-  `title` varchar(500) NOT NULL COMMENT '下载标题',
-  `type` tinyint(1) unsigned NOT NULL COMMENT '类型1压缩文件，2图片，3视频文件',
+  `file_id` int(11) NOT NULL AUTO_INCREMENT,
+  `car_num` varchar(30) DEFAULT NULL,
+  `member_id` int(11) DEFAULT '0',
+  `show` int(11) DEFAULT NULL,
+  `mod_file` int(11) DEFAULT NULL,
+  `title` varchar(500) NOT NULL DEFAULT '' COMMENT '标题',
+  `type` tinyint(1) unsigned NOT NULL COMMENT '类型1种子，2压缩文件，3网盘，4视频',
   `cate_id` int(10) unsigned NOT NULL COMMENT '分类id',
-  `area` tinyint(3) unsigned NOT NULL COMMENT '地区',
   `inter` text COMMENT '简介',
-  `zip_pass` varchar(100) DEFAULT NULL COMMENT '解压密码',
-  `image_cover` varchar(500) DEFAULT '' COMMENT '封面图',
-  `realname` blob COMMENT '原文件名称',
-  `filepath` blob COMMENT '文件路径',
-  `down_url` varchar(500) DEFAULT '' COMMENT '下载地址',
-  `size` int(11) unsigned DEFAULT '0' COMMENT '文件大小，单位kb',
-  `praise` int(10) unsigned NOT NULL COMMENT '点赞数',
-  `browse_num` int(10) unsigned NOT NULL COMMENT '浏览量',
+  `image` varchar(500) DEFAULT '' COMMENT '封面图',
+  `size` int(11) unsigned DEFAULT '0' COMMENT '单位 Kb',
+  `fee_time` int(11) unsigned DEFAULT '0' COMMENT '时长',
+  `make_time` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '制作时间',
+  `praise` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '点赞数',
+  `score` tinyint(1) DEFAULT '5' COMMENT '评分',
+  `browse_num` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '浏览量',
   `create_time` int(11) NOT NULL COMMENT '创建时间',
   `create_user` char(32) NOT NULL DEFAULT '0',
   `update_time` int(11) NOT NULL COMMENT '更新时间',
@@ -570,28 +537,16 @@ CREATE TABLE `vd_file` (
   KEY `delete_user` (`delete_user`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='下载的文件表';
 
+LOCK TABLES `vd_file` WRITE;
+/*!40000 ALTER TABLE `vd_file` DISABLE KEYS */;
 
+INSERT INTO `vd_file` (`file_id`, `car_num`, `member_id`, `show`, `mod_file`, `title`, `type`, `cate_id`, `inter`, `image`, `size`, `fee_time`, `make_time`, `praise`, `score`, `browse_num`, `create_time`, `create_user`, `update_time`, `update_user`, `delete_time`, `delete_user`)
+VALUES
+	(1,'否撒大是大非a d s fa s d f',0,NULL,NULL,'sdasdfasdfasdfasdfasdfasdfa',1,2,'&lt;p&gt;sdasdfasdfasdfasdfasdfasdfasdasdfasdfasdfasdfasdfasdfasdasdfasdfasdfasdfasdfasdfasdasdfasdfasdfasdfasdfasdfasdasdfasdfasdfasdfasdfasdfasdasdfasdfasdfasdfasdfasdfasdasdfasdfasdfasdfasdfasdfasdasdfasdfasdfasdfasdfasdfasdasdfasdfasdfasdfasdfasdfasdasdfasdfasdfasdfasdfasdfasdasdfasdfasdfasdfasdfasdfa&lt;/p&gt;','110/bbd1349047a99f4545d6686fdad08fb4.jpg',0,0,0,1111,5,3,1551091354,'1',0,'0',0,'0'),
+	(2,'接口连接看见啊很健康',0,NULL,NULL,'黄瓜村TG机器人',3,2,'&lt;p&gt;&amp;nbsp;阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发大法第三发史蒂夫阿斯顿发aside&amp;nbsp; dsfas&lt;/p&gt;\r\n&lt;p&gt;sd&lt;/p&gt;\r\n&lt;p&gt;fas&lt;/p&gt;\r\n&lt;p&gt;df&lt;/p&gt;\r\n&lt;p&gt;as&lt;/p&gt;\r\n&lt;p&gt;df&lt;/p&gt;\r\n&lt;p&gt;asdfa&lt;/p&gt;','009/651448945811ef73dc72ba095bddf071.jpg',0,0,0,11,5,11,1551096183,'1',1551101390,'1',0,'0');
 
-# Dump of table vd_file_cate
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `vd_file_cate`;
-
-CREATE TABLE `vd_file_cate` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '文件id',
-  `name` varchar(100) NOT NULL DEFAULT '',
-  `show` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '是否在导航菜单上显示,1不现实，2显示',
-  `sort` tinyint(1) unsigned NOT NULL DEFAULT '100' COMMENT '排序',
-  `create_time` int(11) NOT NULL COMMENT '创建时间',
-  `create_user` char(32) NOT NULL DEFAULT '0',
-  `update_time` int(11) NOT NULL COMMENT '更新时间',
-  `update_user` char(32) NOT NULL DEFAULT '0',
-  `delete_time` int(11) NOT NULL DEFAULT '0' COMMENT '删除时间',
-  `delete_user` char(32) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
-  KEY `delete_user` (`delete_user`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='类型表';
-
+/*!40000 ALTER TABLE `vd_file` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table vd_file_labe
@@ -606,6 +561,46 @@ CREATE TABLE `vd_file_labe` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `vd_file_labe` WRITE;
+/*!40000 ALTER TABLE `vd_file_labe` DISABLE KEYS */;
+
+INSERT INTO `vd_file_labe` (`id`, `file_id`, `labe_id`)
+VALUES
+	(5,2,3),
+	(6,2,2);
+
+/*!40000 ALTER TABLE `vd_file_labe` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table vd_file_url
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `vd_file_url`;
+
+CREATE TABLE `vd_file_url` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `file_id` int(10) unsigned NOT NULL COMMENT '文件ID',
+  `url` varchar(1000) NOT NULL DEFAULT '' COMMENT '地址或者种子',
+  `url_type` tinyint(1) DEFAULT '0' COMMENT '地址类型',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='文件地址表';
+
+LOCK TABLES `vd_file_url` WRITE;
+/*!40000 ALTER TABLE `vd_file_url` DISABLE KEYS */;
+
+INSERT INTO `vd_file_url` (`id`, `file_id`, `url`, `url_type`)
+VALUES
+	(8,1,' 史蒂夫阿斯顿发阿斯顿发阿斯顿发短发阿斯顿发',0),
+	(9,1,' 收费的阿斯顿发阿斯顿发阿斯顿发',0),
+	(10,1,'发卡量手机丢了卡就到了看见啊老司机啊摔',0),
+	(11,1,'将卡利久里将阿拉山口的减肥啦就是打开 ',0),
+	(20,2,' 史蒂夫阿斯顿发阿斯顿发阿斯顿发短发阿斯顿发',0),
+	(21,2,' 收费的阿斯顿发阿斯顿发阿斯顿发',0),
+	(22,2,'将卡利久里将阿拉山口的减肥啦就是打开 ',0);
+
+/*!40000 ALTER TABLE `vd_file_url` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table vd_labe
@@ -616,8 +611,7 @@ DROP TABLE IF EXISTS `vd_labe`;
 CREATE TABLE `vd_labe` (
   `labe_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL DEFAULT '',
-  `status` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '1显示，2隐藏',
-  `sort` tinyint(1) unsigned NOT NULL DEFAULT '100' COMMENT '排序',
+  `show` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '1显示，2隐藏',
   `create_time` int(11) NOT NULL COMMENT '创建时间',
   `create_user` char(32) NOT NULL DEFAULT '0',
   `update_time` int(11) NOT NULL COMMENT '更新时间',
@@ -628,6 +622,21 @@ CREATE TABLE `vd_labe` (
   KEY `delete_user` (`delete_user`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='类型表';
 
+LOCK TABLES `vd_labe` WRITE;
+/*!40000 ALTER TABLE `vd_labe` DISABLE KEYS */;
+
+INSERT INTO `vd_labe` (`labe_id`, `name`, `show`, `create_time`, `create_user`, `update_time`, `update_user`, `delete_time`, `delete_user`)
+VALUES
+	(1,'开发',1,1551081992,'1',1551095925,'1',0,'0'),
+	(2,'业务',1,1551086043,'1',1551095937,'1',0,'0'),
+	(3,'会计',1,1551086057,'1',1551095909,'1',0,'0'),
+	(4,'客服',1,1551095942,'1',0,'0',0,'0'),
+	(5,'营销',1,1551095954,'1',0,'0',0,'0'),
+	(6,'设计',1,1551095967,'1',0,'0',0,'0'),
+	(7,'测试',1,1551095971,'1',0,'0',0,'0');
+
+/*!40000 ALTER TABLE `vd_labe` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table vd_member
@@ -637,26 +646,35 @@ DROP TABLE IF EXISTS `vd_member`;
 
 CREATE TABLE `vd_member` (
   `member_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '管理id',
-  `usename` blob,
-  `nickname` blob,
-  `status` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '1启用，2禁用',
-  `password` varchar(200) NOT NULL DEFAULT '',
-  `balance` varchar(100) DEFAULT '0' COMMENT '余额',
-  `create_user` char(32) CHARACTER SET utf8 DEFAULT NULL,
+  `username` varchar(100) CHARACTER SET utf8mb4 DEFAULT '',
+  `mobile` varchar(20) CHARACTER SET utf8mb4 DEFAULT '0',
+  `company_name` varchar(300) CHARACTER SET utf8mb4 DEFAULT '0',
+  `nickname` varchar(100) CHARACTER SET utf8mb4 DEFAULT '',
+  `email` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `sex` tinyint(1) DEFAULT '1',
+  `avator` varchar(500) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `status` tinyint(1) unsigned DEFAULT '1' COMMENT '1启用，2禁用',
+  `password` varchar(200) CHARACTER SET utf8mb4 DEFAULT '',
+  `balance` varchar(100) CHARACTER SET utf8mb4 DEFAULT '0' COMMENT '余额',
+  `create_user` char(32) DEFAULT NULL,
   `create_time` int(11) DEFAULT NULL,
-  `update_user` char(32) CHARACTER SET utf8 DEFAULT NULL,
+  `update_user` char(32) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`member_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户表';
 
 LOCK TABLES `vd_member` WRITE;
 /*!40000 ALTER TABLE `vd_member` DISABLE KEYS */;
 
-INSERT INTO `vd_member` (`member_id`, `usename`, `nickname`, `status`, `password`, `balance`, `create_user`, `create_time`, `update_user`, `update_time`)
+INSERT INTO `vd_member` (`member_id`, `username`, `mobile`, `company_name`, `nickname`, `email`, `sex`, `avator`, `status`, `password`, `balance`, `create_user`, `create_time`, `update_user`, `update_time`)
 VALUES
-	(1,X'AD2917D3E309183DDB6E0C408581CE02',NULL,1,'','0','1',1541754398,'1',1541763798),
-	(2,X'649523384676A8FF38F679E4D55FD99F',NULL,1,'','0','1',1541754398,'1',1541763792),
-	(3,X'9E9CE44CD9DF2B201F51947E03BCCBE2',NULL,1,'','0','1',1541754398,'1',1541763763);
+	(1,'空间数据来看','0','0','第三发','gangkui1688@icloud.com',2,NULL,2,'Admin888','0','1',1551153486,'1',1551153753),
+	(2,'admin','0','0','超级管理员','gangkui1688@icloud.com',1,NULL,1,'BAIDU.com123','0','1',1551153918,'0',0),
+	(3,'李阳','1231231231231','说到发送到发送到阿斯顿发阿斯顿','',NULL,1,NULL,1,'','0','1',1551186103,'0',0),
+	(4,'爱科技','123123123123','短裤两件事到了看见啊剋  121231','',NULL,1,NULL,1,'','0','1',1551186299,'1',1551186493),
+	(5,'李三思','88979879879879','就看见啊监考老师讲课了就哭了','',NULL,1,NULL,1,'','0','1',1551187227,'0',0),
+	(6,'曹合影','123123123','李李李李李李李李','',NULL,1,NULL,1,'','0','1',1551187247,'0',0),
+	(7,'王明阳','18502050396','将快手快脚进口拉进空间看了','',NULL,1,NULL,1,'','0','1',1551191002,'0',0);
 
 /*!40000 ALTER TABLE `vd_member` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -688,14 +706,14 @@ DROP TABLE IF EXISTS `vd_message`;
 
 CREATE TABLE `vd_message` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '消息ID',
-  `uid` char(32) DEFAULT NULL COMMENT '用户ID',
-  `title` varchar(50) DEFAULT NULL COMMENT '消息标题',
-  `text` varchar(300) DEFAULT NULL COMMENT '消息内容',
-  `url` varchar(200) DEFAULT NULL COMMENT '消息链接',
+  `uid` char(32) CHARACTER SET utf8mb4 DEFAULT NULL COMMENT '用户ID',
+  `title` varchar(50) CHARACTER SET utf8mb4 DEFAULT NULL COMMENT '消息标题',
+  `text` varchar(300) CHARACTER SET utf8mb4 DEFAULT NULL COMMENT '消息内容',
+  `url` varchar(200) CHARACTER SET utf8mb4 DEFAULT NULL COMMENT '消息链接',
   `create_time` int(10) DEFAULT '0' COMMENT '消息时间',
   `read_time` int(10) DEFAULT '0' COMMENT '阅读时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -705,14 +723,14 @@ CREATE TABLE `vd_message` (
 DROP TABLE IF EXISTS `vd_oauth_access_tokens`;
 
 CREATE TABLE `vd_oauth_access_tokens` (
-  `access_token` char(32) CHARACTER SET utf8 NOT NULL DEFAULT '',
-  `client_id` char(32) CHARACTER SET utf8 NOT NULL DEFAULT '',
-  `user_id` varchar(80) CHARACTER SET utf8 DEFAULT NULL,
-  `openid` char(32) CHARACTER SET utf8 DEFAULT NULL,
+  `access_token` char(32) NOT NULL DEFAULT '',
+  `client_id` char(32) NOT NULL DEFAULT '',
+  `user_id` varchar(80) DEFAULT NULL,
+  `openid` char(32) DEFAULT NULL,
   `expires` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `scope` varchar(2000) CHARACTER SET utf8 DEFAULT NULL,
+  `scope` varchar(2000) DEFAULT NULL,
   PRIMARY KEY (`access_token`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `vd_oauth_access_tokens` WRITE;
 /*!40000 ALTER TABLE `vd_oauth_access_tokens` DISABLE KEYS */;
@@ -731,15 +749,15 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `vd_oauth_authorization_codes`;
 
 CREATE TABLE `vd_oauth_authorization_codes` (
-  `authorization_code` char(32) CHARACTER SET utf8 NOT NULL DEFAULT '',
-  `client_id` char(32) CHARACTER SET utf8 NOT NULL DEFAULT '',
-  `user_id` varchar(80) CHARACTER SET utf8 DEFAULT NULL,
-  `redirect_uri` varchar(2000) CHARACTER SET utf8 DEFAULT NULL,
+  `authorization_code` char(32) NOT NULL DEFAULT '',
+  `client_id` char(32) NOT NULL DEFAULT '',
+  `user_id` varchar(80) DEFAULT NULL,
+  `redirect_uri` varchar(2000) DEFAULT NULL,
   `expires` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `scope` varchar(2000) CHARACTER SET utf8 DEFAULT NULL,
-  `id_token` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  `scope` varchar(2000) DEFAULT NULL,
+  `id_token` varchar(1000) DEFAULT NULL,
   PRIMARY KEY (`authorization_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -750,26 +768,26 @@ DROP TABLE IF EXISTS `vd_oauth_clients`;
 
 CREATE TABLE `vd_oauth_clients` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
-  `name` varchar(20) CHARACTER SET utf8 DEFAULT NULL COMMENT '应用名称',
-  `website` varchar(200) CHARACTER SET utf8 DEFAULT NULL COMMENT '应用网站',
+  `name` varchar(20) DEFAULT NULL COMMENT '应用名称',
+  `website` varchar(200) DEFAULT NULL COMMENT '应用网站',
   `cate` tinyint(1) DEFAULT '1' COMMENT '应用分类 1、网页应用 2、客户端',
-  `desc` varchar(200) CHARACTER SET utf8 DEFAULT NULL COMMENT '应用介绍',
-  `domain` varchar(200) CHARACTER SET utf8 DEFAULT NULL COMMENT '域名绑定，绑定后的域名才可访问client_id',
-  `ip` varchar(200) CHARACTER SET utf8 DEFAULT NULL COMMENT '信任IP，以逗号分隔，信任IP才可访问OpenAPI',
-  `client_id` char(32) CHARACTER SET utf8 NOT NULL DEFAULT '' COMMENT 'App Key，只生成一次',
-  `client_secret` char(32) CHARACTER SET utf8 NOT NULL DEFAULT '' COMMENT 'App Secret，后台可以重置',
-  `redirect_uri` varchar(2000) CHARACTER SET utf8 NOT NULL DEFAULT '' COMMENT '授权回调页',
-  `cancel_uri` varchar(2000) CHARACTER SET utf8 DEFAULT NULL COMMENT '取消授权回调页',
-  `grant_types` varchar(80) CHARACTER SET utf8 DEFAULT NULL COMMENT '授权方式',
-  `scope` varchar(2000) CHARACTER SET utf8 DEFAULT NULL COMMENT '授权作用域',
-  `user_id` varchar(80) CHARACTER SET utf8 DEFAULT NULL COMMENT '用户ID',
+  `desc` varchar(200) DEFAULT NULL COMMENT '应用介绍',
+  `domain` varchar(200) DEFAULT NULL COMMENT '域名绑定，绑定后的域名才可访问client_id',
+  `ip` varchar(200) DEFAULT NULL COMMENT '信任IP，以逗号分隔，信任IP才可访问OpenAPI',
+  `client_id` char(32) NOT NULL DEFAULT '' COMMENT 'App Key，只生成一次',
+  `client_secret` char(32) NOT NULL DEFAULT '' COMMENT 'App Secret，后台可以重置',
+  `redirect_uri` varchar(2000) NOT NULL DEFAULT '' COMMENT '授权回调页',
+  `cancel_uri` varchar(2000) DEFAULT NULL COMMENT '取消授权回调页',
+  `grant_types` varchar(80) DEFAULT NULL COMMENT '授权方式',
+  `scope` varchar(2000) DEFAULT NULL COMMENT '授权作用域',
+  `user_id` varchar(80) DEFAULT NULL COMMENT '用户ID',
   `create_user` int(11) DEFAULT NULL COMMENT '添加用户',
   `create_time` int(11) DEFAULT NULL COMMENT '添加时间',
   `update_user` int(11) DEFAULT NULL COMMENT '修改用户',
   `update_time` int(11) DEFAULT NULL COMMENT '修改时间',
   PRIMARY KEY (`id`),
   UNIQUE KEY `client_id` (`client_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `vd_oauth_clients` WRITE;
 /*!40000 ALTER TABLE `vd_oauth_clients` DISABLE KEYS */;
@@ -789,11 +807,11 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `vd_oauth_jwt`;
 
 CREATE TABLE `vd_oauth_jwt` (
-  `client_id` char(32) CHARACTER SET utf8 NOT NULL DEFAULT '',
-  `subject` varchar(80) CHARACTER SET utf8 DEFAULT NULL,
-  `public_key` varchar(2000) CHARACTER SET utf8 DEFAULT NULL,
+  `client_id` char(32) NOT NULL DEFAULT '',
+  `subject` varchar(80) DEFAULT NULL,
+  `public_key` varchar(2000) DEFAULT NULL,
   PRIMARY KEY (`client_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -804,10 +822,10 @@ DROP TABLE IF EXISTS `vd_oauth_permissions`;
 
 CREATE TABLE `vd_oauth_permissions` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
-  `name` varchar(50) CHARACTER SET utf8 DEFAULT NULL COMMENT '权限名称',
-  `info` varchar(200) CHARACTER SET utf8 DEFAULT NULL COMMENT '权限说明',
+  `name` varchar(50) DEFAULT NULL COMMENT '权限名称',
+  `info` varchar(200) DEFAULT NULL COMMENT '权限说明',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `vd_oauth_permissions` WRITE;
 /*!40000 ALTER TABLE `vd_oauth_permissions` DISABLE KEYS */;
@@ -827,14 +845,14 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `vd_oauth_refresh_tokens`;
 
 CREATE TABLE `vd_oauth_refresh_tokens` (
-  `refresh_token` char(32) CHARACTER SET utf8 NOT NULL DEFAULT '',
-  `client_id` char(32) CHARACTER SET utf8 NOT NULL DEFAULT '',
-  `user_id` varchar(80) CHARACTER SET utf8 DEFAULT NULL,
-  `openid` char(32) CHARACTER SET utf8 DEFAULT NULL,
+  `refresh_token` char(32) NOT NULL DEFAULT '',
+  `client_id` char(32) NOT NULL DEFAULT '',
+  `user_id` varchar(80) DEFAULT NULL,
+  `openid` char(32) DEFAULT NULL,
   `expires` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `scope` varchar(2000) CHARACTER SET utf8 DEFAULT NULL,
+  `scope` varchar(2000) DEFAULT NULL,
   PRIMARY KEY (`refresh_token`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -845,17 +863,17 @@ DROP TABLE IF EXISTS `vd_oauth_scopes`;
 
 CREATE TABLE `vd_oauth_scopes` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
-  `name` varchar(100) CHARACTER SET utf8 DEFAULT NULL COMMENT '授权名称',
-  `scope` varchar(80) CHARACTER SET utf8 DEFAULT NULL COMMENT '授权',
+  `name` varchar(100) DEFAULT NULL COMMENT '授权名称',
+  `scope` varchar(80) DEFAULT NULL COMMENT '授权',
   `is_default` tinyint(1) DEFAULT '0' COMMENT '是否默认',
-  `desc` varchar(200) CHARACTER SET utf8 DEFAULT NULL COMMENT '授权说明',
+  `desc` varchar(200) DEFAULT NULL COMMENT '授权说明',
   `create_user` int(11) DEFAULT NULL,
   `create_time` int(11) DEFAULT NULL,
   `update_user` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `scope` (`scope`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `vd_oauth_scopes` WRITE;
 /*!40000 ALTER TABLE `vd_oauth_scopes` DISABLE KEYS */;
@@ -882,16 +900,16 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `vd_oauth_users`;
 
 CREATE TABLE `vd_oauth_users` (
-  `userid` char(32) CHARACTER SET utf8 DEFAULT NULL COMMENT '用户ID',
-  `username` varchar(80) CHARACTER SET utf8 NOT NULL DEFAULT '' COMMENT '账号',
-  `password` varchar(32) CHARACTER SET utf8 DEFAULT NULL COMMENT '密码',
-  `realname` varchar(80) CHARACTER SET utf8 DEFAULT NULL COMMENT '真实姓名',
-  `avatar` varchar(255) CHARACTER SET utf8 DEFAULT NULL COMMENT '头像',
-  `email` varchar(80) CHARACTER SET utf8 DEFAULT NULL COMMENT '邮箱',
+  `userid` char(32) DEFAULT NULL COMMENT '用户ID',
+  `username` varchar(80) NOT NULL DEFAULT '' COMMENT '账号',
+  `password` varchar(32) DEFAULT NULL COMMENT '密码',
+  `realname` varchar(80) DEFAULT NULL COMMENT '真实姓名',
+  `avatar` varchar(255) DEFAULT NULL COMMENT '头像',
+  `email` varchar(80) DEFAULT NULL COMMENT '邮箱',
   `email_verified` tinyint(1) DEFAULT '0' COMMENT '是否邮箱验证',
-  `scope` varchar(2000) CHARACTER SET utf8 DEFAULT 'base' COMMENT '授权范围',
+  `scope` varchar(2000) DEFAULT 'base' COMMENT '授权范围',
   PRIMARY KEY (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `vd_oauth_users` WRITE;
 /*!40000 ALTER TABLE `vd_oauth_users` DISABLE KEYS */;
@@ -904,20 +922,33 @@ VALUES
 UNLOCK TABLES;
 
 
-# Dump of table vd_video
+# Dump of table vd_send_goods
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `vd_video`;
+DROP TABLE IF EXISTS `vd_send_goods`;
 
-CREATE TABLE `vd_video` (
-  `vido_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(500) NOT NULL DEFAULT '' COMMENT '标题',
-  `time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '视频时长',
-  `video_src` varchar(1000) DEFAULT NULL COMMENT '视频地址',
-  `video_file` varchar(500) DEFAULT NULL COMMENT '视频文件地址',
-  PRIMARY KEY (`vido_id`)
+CREATE TABLE `vd_send_goods` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `go_off` int(11) unsigned NOT NULL,
+  `car_num` varchar(20) NOT NULL DEFAULT '',
+  `member_id` int(11) unsigned NOT NULL,
+  `goods_inter` text,
+  `create_time` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `vd_send_goods` WRITE;
+/*!40000 ALTER TABLE `vd_send_goods` DISABLE KEYS */;
+
+INSERT INTO `vd_send_goods` (`id`, `go_off`, `car_num`, `member_id`, `goods_inter`, `create_time`)
+VALUES
+	(1,1551174661,'JLAKJJK',4,'KJALASKDFLASDLKJFALSJDLFJKASDFASDFADF',0),
+	(2,1549317290,'jajdlja ',4,'faklsdflasjdlkjalskdjflkajsldjflajsd',0),
+	(3,1549583770,'KLJALJLK',6,'dfalksjdlfjaslkdjflkajsldkfas',1551189377),
+	(4,1551187407,'KJLAJJ',7,'将辣椒独立空间发了速度快罚款了就收到啦空间拉德斯基辣椒',1551191030);
+
+/*!40000 ALTER TABLE `vd_send_goods` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 
