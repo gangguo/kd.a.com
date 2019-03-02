@@ -17,7 +17,7 @@ class mod_send_goods extends mod_base
     public static $_pk = 'id';
 
     public static $_field = [
-        'go_off', 'car_number', 'member_id', 'goods_inter',
+        'go_off', 'car_number', 'member_id', 'goods_inter','balance',
         'create_time'
     ];
 

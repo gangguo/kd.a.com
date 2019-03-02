@@ -57,6 +57,15 @@
                         </div>
 
                         <div class="form-group">
+                            <label class="col-sm-2 control-label"><code>*</code> 余额 :</label>
+                            <div class="col-sm-4">
+                                <input name="balance"  type="text" class="form-control" datatype="*1-20" nullmsg="请输入余额"
+                                       value="<{if empty($data['balance'])}><{else}><{$data.balance}><{/if}>" />
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
                             <label class="col-sm-2 control-label"><code>*</code> 发车时间:</label>
                             <div class="col-sm-4 input-group" style="float:left;padding-left:15px;padding-right:15px;">
                                 <div class="input-group">
