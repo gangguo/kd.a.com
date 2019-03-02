@@ -1,6 +1,16 @@
+.svn/
+.idea/
+.vscode/
 data/
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 00f25c55f01d61ac1f39c6ff2e82841d7b73c00c
+cache/
+compile/
+log/
+uploads/
+temp/
+inc_config.dev.php
+*.log
+*.swp
+*.swo
+!.gitkeep
+*.pid
+.DS_Store
