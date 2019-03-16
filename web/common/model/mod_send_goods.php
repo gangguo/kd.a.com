@@ -31,7 +31,7 @@ class mod_send_goods extends mod_base
             $date = date('Y-m-d H:i:s', $data['go_off']);
             $content = "尊敬的{$member_info['username']} 先生/女生，您的货物已于{$date}装车并出发，车牌号码是：{$data['car_num']},账户余额{$data['balance']},祝您生活愉快";
             self::send_sms($member_info['mobile'], $content);
-            $content = "尊敬的{$member_info['username']} 先生/女生，您的货物备注说明：{$data['goods_inter']}";
+            $content = "尊敬的{$member_info['username']} 先生/女生，您的货物备注说明：{$data['goods_inter']}，祝您生活愉快！";
             self::send_sms($member_info['mobile'], $content);
         }
 
